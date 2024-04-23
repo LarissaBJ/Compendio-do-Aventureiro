@@ -1,8 +1,6 @@
-# React + Vite
+# COMPÊNDIO DO AVENTUREIRO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esse projeto é um sistema de ficha de personagem para D&D que simplifica a organização de informações, eliminando a 
+necessidade de consultar livros e fazer cálculos. Com uma interface intuitiva, os jogadores podem criar e gerenciar 
+seus personagens de forma rápida e eficiente. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
