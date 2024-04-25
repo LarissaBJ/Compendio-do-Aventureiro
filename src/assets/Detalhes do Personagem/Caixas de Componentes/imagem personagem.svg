@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="125mm"
+   height="175mm"
+   viewBox="0 0 125 175"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-421.70156,-17.946259)"
+       id="g12">
+      <path
+         d="m 1666.34,84.5001 h 328.32 l 1.53,7.8272 c 2.15,8.0487 5.74,14.8977 10.26,19.7337 l 1.05,0.9 v 574.078 l -1.05,0.9 c -4.52,4.836 -8.11,11.685 -10.26,19.734 l -1.53,7.827 h -328.32 l -1.53,-7.827 c -2.15,-8.049 -5.74,-14.898 -10.26,-19.734 l -1.05,-0.9 V 112.961 l 1.05,-0.9 c 4.52,-4.836 8.11,-11.685 10.26,-19.7337 z"
+         stroke="#ff0000"
+         stroke-width="3"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path1" />
+      <path
+         d="m 1665,92 331.01,1e-4"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2" />
+      <path
+         d="m 1665.5,707.5 h 331.01"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path3" />
+      <path
+         d="M 1653,131.315 C 1653,109.602 1670.6,92 1692.32,92 h 275.36 c 21.72,0 39.32,17.602 39.32,39.315 v 536.37 C 2007,689.398 1989.4,707 1967.68,707 H 1692.32 C 1670.6,707 1653,689.398 1653,667.685 Z"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path4" />
+      <path
+         d="M 1626.8,114.5 H 2034 l 16.5,16.499 V 669.001 L 2034,685.5 h -407.2 l -16.3,-16.3 V 130.8 Z"
+         stroke="#ff0000"
+         stroke-width="3"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path5" />
+      <path
+         d="m 1610,154.541 c 0,-22.39 18.15,-40.541 40.54,-40.541 h 358.92 c 22.39,0 40.54,18.151 40.54,40.541 v 489.918 c 0,22.39 -18.15,40.541 -40.54,40.541 H 1650.54 C 1628.15,685 1610,666.849 1610,644.459 Z"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path6" />
+      <path
+         d="M 1616,135 V 663.88"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path7" />
+      <path
+         d="M 2044,135 V 663.88"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path8" />
+      <path
+         d="m 1830,77 c 29.03,0 54.45,9.9105 68.5,24.747 L 1906,114 h -152 l 7.5,-12.253 C 1775.55,86.9105 1800.97,77 1830,77 Z"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path9" />
+      <path
+         d="m 1757,109 h 146.4"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path10" />
+      <path
+         d="M 75.9999,0 C 105.031,0 130.455,10.1784 144.503,25.4158 L 152,38 H 0 L 7.4967,25.4158 C 21.5451,10.1784 46.969,0 75.9999,0 Z"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,1754,724)"
+         id="path11" />
+      <path
+         d="M 0,0 146.4,1.04987e-4"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,1757,691)"
+         id="path12" />
+    </g>
+  </g>
+</svg>

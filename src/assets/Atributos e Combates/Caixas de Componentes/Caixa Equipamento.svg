@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="115mm"
+   height="115mm"
+   viewBox="0 0 115 115"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="CAIXA ATAQUES.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-5.7922823,-197.95759)"
+       id="g4">
+      <path
+         d="M 46.5039,757.5 H 433.496 l 14.004,14.032 v 394.358 l -11.588,11.61 H 44.0883 L 32.5001,1165.89 V 771.532 Z"
+         stroke="#ff0000"
+         stroke-width="3"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path1" />
+      <path
+         d="M 32,788.847 C 32,771.258 46.2585,757 63.8473,757 H 415.153 C 432.741,757 447,771.258 447,788.847 v 356.303 c 0,17.59 -14.259,31.85 -31.847,31.85 H 63.8473 C 46.2585,1177 32,1162.74 32,1145.15 Z"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2" />
+      <path
+         d="M 0,0 1.04987e-4,398.8"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,41,1166.8)"
+         id="path3" />
+      <path
+         d="M 0,0 1.04987e-4,398.8"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,439,1166.8)"
+         id="path4" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="219.99998mm"
+   height="50mm"
+   viewBox="0 0 219.99998 50"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="MAGIC CAB.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip0-77">
+      <rect
+         x="435"
+         y="-19"
+         width="97"
+         height="163"
+         id="rect1-9" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       clip-path="url(#clip0-77)"
+       transform="matrix(0.26458333,0,0,0.26458333,-56.016452,6.5110697)"
+       id="g2">
+      <path
+         d="M 435,-19 532,62.5001 435,144 V 127.75 L 512.66,62.5001 435,-2.75007 Z"
+         fill="#c00000"
+         fill-rule="evenodd"
+         id="path1-1" />
+      <path
+         d="m 435,-18.9999 96,81 H 511.593 L 435,-2.62525 Z"
+         fill="#ff0000"
+         fill-rule="evenodd"
+         id="path2-6" />
+    </g>
+  </g>
+</svg>

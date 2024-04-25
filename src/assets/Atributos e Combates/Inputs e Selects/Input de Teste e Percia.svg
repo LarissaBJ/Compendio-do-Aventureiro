@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="40mm"
+   height="269.99997mm"
+   viewBox="0 0 40 269.99997"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="atributo3.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-163.01784,-36.822688)"
+       id="g3">
+      <path
+         d="m 622,155 h 56.6"
+         stroke="#c00000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path1" />
+      <path
+         d="m 648.954,155.013 c -0.986,-0.229 -19.248,2.649 -22.649,4.12 -3.401,1.472 0.748,4.121 2.244,4.71 1.497,0.588 6.122,-0.622 6.734,-1.178 0.612,-0.556 -5.475,-0.883 -3.061,-2.158 2.415,-1.275 17.719,-5.265 16.732,-5.494 z"
+         stroke="#c00000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="#c00000"
+         fill-rule="evenodd"
+         id="path2" />
+      <path
+         d="M 23.9544,0.0128749 C 22.9681,-0.216093 4.70576,2.66182 1.30495,4.13337 -2.09587,5.60503 2.05313,8.25387 3.54949,8.84251 5.04584,9.43116 9.67095,8.22112 10.2831,7.66523 10.8952,7.10934 4.80784,6.78221 7.22236,5.50687 9.63689,4.23153 24.9407,0.241843 23.9544,0.0128749 Z"
+         stroke="#c00000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="#c00000"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,675,155)"
+         id="path3" />
+    </g>
+  </g>
+</svg>

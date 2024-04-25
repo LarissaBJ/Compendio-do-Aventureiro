@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30mm"
+   height="37mm"
+   viewBox="0 0 30 37"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   inkscape:export-filename="CABEÇA DO DRAGÃO.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" /><defs
+     id="defs1" /><g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       transform="matrix(0.26458333,0,0,0.26458333,-4.2765892,-120.20231)"
+       id="g2"><g
+         transform="translate(-25.476563,-11.122978)"
+         id="g2-1"><path
+           d="m 60.1642,469.5 h 75.6718 c 0,4.974 3.02,9.242 7.325,11.065 l 4.339,0.877 V 583.5 H 48.5001 V 481.442 l 4.3395,-0.877 c 4.3044,-1.823 7.3246,-6.091 7.3246,-11.065 z"
+           stroke="#c00000"
+           stroke-width="0.666667"
+           stroke-miterlimit="8"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path1" /><path
+           d="m 67.5001,581.5 c 0,-11.046 13.6553,-20 30.5,-20 16.8449,0 30.4999,8.954 30.4999,20 0,11.046 -13.655,20 -30.4999,20 -16.8447,0 -30.5,-8.954 -30.5,-20 z"
+           stroke="#c00000"
+           stroke-width="0.666667"
+           stroke-miterlimit="8"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path2" /></g></g></g></svg>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="30mm"
+   viewBox="0 0 100 30"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="CAB PERS.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,3.5653263,-61.322974)"
+       id="g2-2">
+      <path
+         d="M 14.0935,245.5 H 221.756 l 1.072,2.394 c 0.798,0.738 1.747,1.335 2.801,1.748 l 2.871,0.535 v 74.934 l -4.074,1.693 -1.526,3.696 H 13.9081 l -1.5259,-3.696 c -1.2494,-1.253 -2.97554,-2.028 -4.88215,-2.028 V 250.149 L 10.22,249.642 c 1.0544,-0.413 2.004,-1.01 2.8015,-1.748 z"
+         stroke="#ff0000"
+         stroke-width="3"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path1-8" />
+      <path
+         d="M 26.9116,245.5 H 208.376 c 7.593,0 14.107,4.783 16.89,11.6 l 1.234,6.335 -0.833,4.479 c -0.873,5.734 -1.382,12.646 -1.382,20.086 0,7.44 0.509,14.352 1.382,20.086 l 0.833,4.479 -1.234,6.335 c -2.783,6.817 -9.297,11.6 -16.89,11.6 H 26.9116 c -7.5926,0 -14.107,-4.783 -16.8897,-11.6 L 9.50005,316.222 10.27,313.403 c 1.465,-6.501 2.371,-15.483 2.371,-25.403 0,-9.92 -0.906,-18.901 -2.371,-25.402 L 9.50005,259.779 10.0219,257.1 c 2.7827,-6.817 9.2971,-11.6 16.8897,-11.6 z"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path2-0" />
+    </g>
+  </g>
+</svg>

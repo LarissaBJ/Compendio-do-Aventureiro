@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300mm"
+   height="100mm"
+   viewBox="0 0 300 100"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="3.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,4.1318127,-160.41717)"
+       id="g4">
+      <path
+         d="M 31.7461,653.5 H 1001.25 l 10.25,10.268 V 927.82 l -9.66,9.68 H 31.1594 l -9.6593,-9.68 V 663.768 Z"
+         stroke="#ff0000"
+         stroke-width="3"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path1" />
+      <path
+         d="M 22,682.7 C 22,666.297 35.2973,653 51.7003,653 H 981.3 c 16.403,0 29.7,13.297 29.7,29.7 v 224.6 c 0,16.403 -13.297,29.7 -29.7,29.7 H 51.7003 C 35.2973,937 22,923.703 22,907.3 Z"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path2" />
+      <path
+         d="m 26,668 10e-5,255.6"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path3" />
+      <path
+         d="M 1007,668 V 923.6"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path4" />
+    </g>
+  </g>
+</svg>

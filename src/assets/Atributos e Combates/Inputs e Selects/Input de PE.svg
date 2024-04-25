@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="80mm"
+   height="20mm"
+   viewBox="0 0 80 20"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="PQ.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-178.36404,-89.661769)"
+       id="g7-6">
+      <path
+         d="m 843.125,366.5 h 46.594 l 9.781,9.804 v 21.626 l -9.548,9.57 h -46.613 l -9.839,-9.862 v -21.49 z"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path1-14" />
+      <path
+         d="M 0,0 13.7627,14.3321"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,848.263,366.5)"
+         id="path2-86" />
+      <path
+         d="m 885.5,366.5 13.763,14.332"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path3-33" />
+      <path
+         d="M 848.263,406.832 834.5,392.5"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path4-17" />
+      <path
+         d="M 0,0 13.7627,14.3321"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,885.5,406.832)"
+         id="path5-24" />
+      <path
+         d="m 879.5,355.77 v 10.73 h -25 v -10.887 l 1.234,0.52 c 1.331,0 2.41,-1.097 2.41,-2.45 0,-0.677 -0.27,-1.289 -0.706,-1.733 l -0.788,-0.332 7.765,-8.118 h 5.193 l 7.866,8.223 -1.134,0.478 c -0.436,0.443 -0.705,1.056 -0.705,1.732 0,1.353 1.078,2.45 2.409,2.45 z"
+         stroke="#ff0000"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#ff0000"
+         fill-rule="evenodd"
+         id="path6-23" />
+      <text
+         fill="#ffffff"
+         font-family="'Arial Narrow', 'Arial Narrow_MSFontService', sans-serif"
+         font-weight="700"
+         font-stretch="condensed"
+         font-size="12px"
+         transform="translate(859.858,362)"
+         id="text6-1">P</text>
+      <text
+         fill="#ffffff"
+         font-family="'Arial Narrow', 'Arial Narrow_MSFontService', sans-serif"
+         font-weight="700"
+         font-stretch="condensed"
+         font-size="12px"
+         transform="translate(866.358,362)"
+         id="text7-3">E</text>
+    </g>
+  </g>
+</svg>
