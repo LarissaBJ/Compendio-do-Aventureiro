@@ -9,10 +9,9 @@ import { EquipmentWrapper,
   ItemInput,
   InputCoin,
   ItemHeader,
-  IconButton,
-  IconImage,
-  ItemHeaderTitle,
-  AddButtonContainer} from './styled';
+  ItemHeaderTitle
+  } from './styled';
+ import  {IconButton, IconImage,AddButtonContainer} from '../StyledButtons';
 import CoinPCBoxImage from '../../assets/Atributos e Combates/Inputs e Selects/Input de PC.svg';
 import CoinPQBoxImage from '../../assets/Atributos e Combates/Inputs e Selects/Input de PQ.svg';
 import CoinPPBoxImage from '../../assets/Atributos e Combates/Inputs e Selects/Input de PP.svg';
@@ -27,7 +26,7 @@ const Equipment = () => {
     const { equipments, addEquipment, updateEquipment, deleteEquipment } = useCRUD();
   
     const handleAddItem = () => {
-      const newItem = { name: '', weight: '' };
+      const newItem = { type: '', name: '', weight: '' };
       addEquipment(newItem);
     };
   
@@ -62,7 +61,7 @@ const Equipment = () => {
                   width="48px"
                   type="number"
                   value={equipment.weight}
-                  onChange={(e) => handleUpdateItem(equipment.id, 'weight', e.target.value)}
+                  onChange={(e) => handleUpdateItem(equipment.id, 'type', e.target.value)}
                 />
                 <ItemInput
                   $image={InputNameItemImage}

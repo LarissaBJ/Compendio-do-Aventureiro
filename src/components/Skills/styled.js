@@ -13,7 +13,7 @@ export const SkillsWrapper = styled.div`
   box-sizing: border-box;
 `;
 export const SkillTitle = styled.h1`
-    font-size: 15px;
+    font-size: 17px;
     color: #890004;
     margin-top: 10px;
     margin-bottom: 15px;

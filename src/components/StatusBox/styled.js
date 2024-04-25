@@ -41,7 +41,7 @@ export const StatusShieldBox = styled.div`
 // CONFIGURAAÇÃO DO TITULO 
 
 const TextBase = styled.h2`
-  font-size: ${(props) => props.fontSize || '16px'};
+  font-size: ${(props) => props.fontSize || '12px'};
   color: ${(props) => props.$color || '#890004'}; 
   text-align: center;
   margin-top: ${(props) => props.$marginTop || '10px'}; 
@@ -60,12 +60,12 @@ export const StatusValue = styled(TextBase).attrs({
 })``;
 
 export const StatusShieldTitle = styled(TextBase).attrs({
-  $marginTop: '20px', 
+  $marginTop: '15px', 
   fontSize: '15px'
 })``;
 
 export const StatusTitle = styled(TextBase).attrs({
-  fontSize: '14px',
+  fontSize: '12px',
   $marginTop: '15px', 
   $color: '#FFFFFF' 
 })``;

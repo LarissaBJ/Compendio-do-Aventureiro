@@ -22,7 +22,7 @@ export const EquipmentTitle = styled.h2`
   width: 100%;
   padding: 10px 0; 
   margin: 0px;
-  font-size: 15px;
+  font-size: 17px;
 `;
 
 // CONFIGURAÇÃO DE MOEDAS
@@ -128,37 +128,3 @@ export const ItemInput = styled.input`
   }
 `;
 
-export const IconButton = styled.button`
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 26px; 
-  height: 26px;
-  padding: 0px;
-
-  &:hover {
-    opacity: 0.8; 
-  }
-  &:active {
-    opacity: 0.6; 
-  }
-  
-  &:focus {
-    outline: none; 
-  }
-`;
-
-export const IconImage = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
-export const AddButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-start; 
-  width: 100%; 
-  padding: 0px; 
-`;

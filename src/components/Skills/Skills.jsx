@@ -39,7 +39,7 @@ const Skills = () => {
 
   return (
     <SkillsWrapper>
-      <SkillTitle>Perícias</SkillTitle>
+      <SkillTitle>PERÍCIAS</SkillTitle>
       <SkillsHeader>
         <LabelHeaderMod>Mod</LabelHeaderMod>
         <LabelHeaderName>Nome</LabelHeaderName>
