@@ -12,7 +12,7 @@ const Defense = () => {
                     <StatusSubTitle>Iniciativa</StatusSubTitle>
                     <StatusValue>0</StatusValue>
                 </StatusBox>
-                <StatusShieldBox image={DefenserShildBoxValueImage} width="115px" height="131px">
+                <StatusShieldBox $image={DefenserShildBoxValueImage} width="115px" height="131px">
                     <StatusShieldTitle>CA</StatusShieldTitle>
                     <StatusValue>0</StatusValue>
                 </StatusShieldBox>

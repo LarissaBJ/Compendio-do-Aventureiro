@@ -13,7 +13,7 @@ const Life = () => {
                     <StatusSubTitle>Atual</StatusSubTitle>
                     <StatusValue>0</StatusValue>
                 </StatusBox>
-                <StatusShieldBox image={LifeShildBoxValueImage} width="112px" height="133px">
+                <StatusShieldBox $image={LifeShildBoxValueImage} width="112px" height="133px">
                     <StatusShieldTitle>MÁXIMA</StatusShieldTitle>;
                     <StatusValue>0</StatusValue>
                 </StatusShieldBox>

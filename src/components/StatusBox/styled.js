@@ -29,17 +29,14 @@ export const StatusBox = styled.div`
   margin: 0 15px; 
 `;
 
-const getBackgroundImage = (image) => {
-  return `url(${image})`;
-};
-
 export const StatusShieldBox = styled.div`
-  background-image: ${(props) => getBackgroundImage(props.image)};
+  background-image: ${(props) => `url(${props.$image})`};
   background-size: cover; 
   background-position: center; 
   width: ${(props) => props.width || '112px'}; 
   height: ${(props) => props.height || '133px'};
 `;
+
 
 // CONFIGURAAÇÃO DO TITULO 
 
@@ -49,7 +46,7 @@ const TextBase = styled.h2`
   text-align: center;
   margin-top: ${(props) => props.$marginTop || '10px'}; 
   margin-bottom: ${(props) => props.$marginBottom || '0px'}; 
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif; //definir no doc total 
 `;
 
 export const StatusSubTitle = styled(TextBase).attrs({

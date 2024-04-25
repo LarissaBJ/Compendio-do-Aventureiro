@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Skills from '../../../components/Skills/Skills';
 import Life from '../../../components/StatusBox/Life';
 import Defense from '../../../components/StatusBox/Defense';
+import {StatusBox} from './styled';
 
-
-const AttributeCombatPage = () => {
+class AttributeCombatPage extends Component {
+  render() {
     return (
-        <div>
-            <h1>ATTRIBUTE COMBAT PAGE</h1>
-            <Life/>
-            <Defense/>
-        </div>
+      <div>
+        <h1>ATTRIBUTECOMBATPAGE</h1>
+        <StatusBox>
+          <Life/>
+          <Defense/>
+        </StatusBox>
+        
+        <Skills/>
+      </div>
+    
+        
     );
-};
+  }
+}
 
 export default AttributeCombatPage;
