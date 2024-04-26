@@ -5,6 +5,7 @@ import Defense from '../../../components/StatusBox/Defense';
 import {StatusBox} from './styled';
 import Equipment from '../../../components/Equipment/Equipment';
 import Proficiency from '../../../components/Proficiency/Proficiency';
+import ResistanceTest from "../../../components/ResistanceTest/ResistanceTest.jsx";
 
 class AttributeCombatPage extends Component {
   render() {
@@ -15,7 +16,8 @@ class AttributeCombatPage extends Component {
           <Life/>
           <Defense/>
         </StatusBox>
-        <Skills/>
+          <ResistanceTest/>
+          <Skills/>
         <Proficiency/>
         <Equipment/>
 

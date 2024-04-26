@@ -9,14 +9,14 @@ export const SkillsWrapper = styled.div`
   background-position: center;
   width: 255.55px;
   height: 590px;
-  padding: 0 20px 0 20px; 
+  padding: 0 20px 0 20px;
   box-sizing: border-box;
 `;
 export const SkillTitle = styled.h1`
-    font-size: 17px;
-    color: #890004;
-    margin-top: 10px;
-    margin-bottom: 15px;
+  font-size: 15px;
+  color: #890004;
+  margin-top: 10px;
+  margin-bottom: 15px;
 `;
 export const SkillsHeader = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ export const SkillItem = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   margin-bottom : 4px ;
 `;
 
@@ -37,19 +37,19 @@ export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 18px;   
-  height: 18px;  
-  border-radius: 50%;  
-  border: 2px solid #890004;  
-  background-color: #C69999;  
-  cursor: pointer; 
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #890004;
+  background-color: #C69999;
+  cursor: pointer;
   &:checked {
     background-color: #890004;
   }
   &:focus {
     outline: none;
   }
-  margin-right: 8px; 
+  margin-right: 8px;
 `;
 
 export const ModBox = styled.div`
@@ -77,33 +77,34 @@ export const Label = styled.span`
 `;
 
 export const LabelName = styled(Label)`
-  flex: 2; 
+  flex: 2;
   text-align: left;
-  overflow: hidden;  
-  white-space: normal;  
-  
+  overflow: hidden;
+  white-space: normal;
+  font-weight: 300;
 `;
 
 export const LabelAttribute = styled(Label)`
-  width: 45px;  
+  width: 45px;
   text-align: center;
   overflow: hidden;
-  white-space: nowrap;  
-  text-overflow: ellipsis; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 300;
 `;
 
 export const LabelHeaderName = styled(Label)`
-  width: 50px; 
-  margin-right: 30px; 
-  margin-left: 10px; 
+  width: 50px;
+  margin-right: 30px;
+  margin-left: 10px;
 `;
 
 export const LabelHeaderAttribute = styled(Label)`
-  width: 50px; 
+  width: 50px;
 `;
 
 export const LabelHeaderMod = styled(Label)`
   width: 30px;
-  margin-left:38px ; 
+  margin-left:38px ;
   margin-right:20px ;
 `;
