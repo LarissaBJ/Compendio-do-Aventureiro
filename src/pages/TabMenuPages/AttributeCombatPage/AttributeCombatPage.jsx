@@ -1,31 +1,12 @@
-import React, { Component } from 'react';
-import Skills from '../../../components/Skills/Skills';
-import Life from '../../../components/StatusBox/Life';
-import Defense from '../../../components/StatusBox/Defense';
-import {StatusBox} from './styled';
-import Equipment from '../../../components/Equipment/Equipment';
-import Proficiency from '../../../components/Proficiency/Proficiency';
-import ResistanceTest from "../../../components/ResistanceTest/ResistanceTest.jsx";
+import React from 'react';
+import Attributes from '../../../components/Attributes/Attributes';
 
-class AttributeCombatPage extends Component {
-  render() {
-    return (
-      <div>
-        <h1>ATTRIBUTECOMBATPAGE</h1>
-        <StatusBox>
-          <Life/>
-          <Defense/>
-        </StatusBox>
-          <ResistanceTest/>
-          <Skills/>
-        <Proficiency/>
-        <Equipment/>
-
-      </div>
-    
-        
-    );
-  }
-}
+const AttributeCombatPage = () => {
+  return (
+    <div>
+      <Attributes/> 
+    </div>
+  );
+};
 
 export default AttributeCombatPage;
