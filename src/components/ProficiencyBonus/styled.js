@@ -44,5 +44,4 @@ export const ProficiencyText = styled(TextBase).attrs({
   font-size: 13px;
   margin-top: 0;
   font-family: 'Inter', 'sans-serif';
-
 `;
