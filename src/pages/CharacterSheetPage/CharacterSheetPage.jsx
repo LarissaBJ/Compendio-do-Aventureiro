@@ -1,16 +1,18 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import MenuNavBar from '../../components/NavigateBars/MenuNavBar/MenuNavBar';
+import {PageContenierSheet, ContentSheet} from '../../App.js';
+import HeaderSheet from '../../components/HeaderSheet/HeaderSheet';
 
 const CharacterSheetPage = () => {
     return (
-        <div>
-            <h1>CHARACTER SHEET PAGE</h1>
-            <h1>MENU SECUNDARIO</h1>
-            <Link to="/charactersheet/attributecombat">-ATTRIBUTE & COMBAT-</Link>
-            <Link to="/charactersheet/characterdetail">-CHARACTER DETAIL-</Link>
-            <Link to="/charactersheet/magicconjuration">-MAGIC & CONJURATION-</Link>
-            <Outlet/>
-        </div>
+        <PageContenierSheet>
+            <HeaderSheet/>
+            <MenuNavBar/>
+            <ContentSheet>
+                <Outlet/>
+            </ContentSheet>
+        </PageContenierSheet>
     );
 };
 

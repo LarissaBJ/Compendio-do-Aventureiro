@@ -1,20 +1,16 @@
-import { Link, Outlet } from 'react-router-dom'
-import './App.css'
-
+import {Outlet } from 'react-router-dom';
+import Navbar from './components/NavigateBars/NavBar/NavBar';
+import {PageContenier,ContentPage} from './App.js';
 function App() {
 
   return (
-    <div className='App'>
-      <h1>NAVBAR</h1>
-      <Link to="/">-HOME-</Link>
-      <Link to="/login">-LOGIN-</Link>
-      <Link to="/about">-ABOUT-</Link>
-      <Link to="/character">-CHARACTER-</Link>
-      <Link to="/register">-REGISTER-</Link>
-      <Link to="/charactersheet">-CHARACTER SHEET-</Link>
-      <Outlet/>
-      <p>FOOTER</p>
-    </div>
+    <PageContenier>
+      <Navbar/>
+      <ContentPage>
+        <Outlet/>
+      </ContentPage>
+      <footer>FOOTER</footer>
+    </PageContenier>
   )
 }
 
