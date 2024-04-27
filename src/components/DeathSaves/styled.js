@@ -22,10 +22,6 @@ export const  DeathSavesElementsWrapper = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding-left: 12px;
-
-
-
-
 `;
 
 const TextBase = styled.h2`
@@ -58,8 +54,6 @@ export const DeathSavesText = styled(TextBase).attrs({
   
 `;
 
-
-
 export const  DeathSavesButtonsWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -70,12 +64,10 @@ export const  DeathSavesButtonsWrapper = styled.div`
   background-image: url(${DeathSavesButtonImage});
 `;
 
-
 export const DeathSavesCheckBox = styled.input.attrs({ type: 'checkbox' })`
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
   width: 22px;
   height: 22px;
   border-radius: 50%;
