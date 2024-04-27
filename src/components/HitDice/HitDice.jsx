@@ -1,20 +1,35 @@
 import React from 'react';
-import {DeathSavesElementsWrapper, DeathSavesText, DeathSavesTitle, HitDiceWrapper} from "./styled.js";
+import {
+    HitDiceElementsWrapper, HitDiceInput, HitDiceInputTotal,
+    HitDiceText,
+    HitDiceTitle, HitDiceTotalWrapper,
+    HitDiceWrapper
+} from "./styled.js";
 
 const HitDice = () => {
     return (
         <HitDiceWrapper>
-            <DeathSavesElementsWrapper>
-                <DeathSavesTitle>DADOS DE VIDA</DeathSavesTitle>
+            <HitDiceElementsWrapper>
+                <HitDiceTitle>DADOS DE VIDA</HitDiceTitle>
+                <HitDiceTotalWrapper>
+                    <HitDiceText>Total:</HitDiceText>
+                    <HitDiceInputTotal
+                        placeholder={0}
+                        min={0}
+                        type="number"/>
+                </HitDiceTotalWrapper>
 
-                <DeathSavesText>{1}</DeathSavesText>
+                <HitDiceInput
+                    placeholder={0}
+                    min={0}
+                    type="number"
+                />
 
-                <DeathSavesText>D{10}</DeathSavesText>
-            </DeathSavesElementsWrapper>
+                <HitDiceText>D{10}</HitDiceText>
+            </HitDiceElementsWrapper>
 
         </HitDiceWrapper>
     );
 };
 
-//TODO
 export default HitDice;
