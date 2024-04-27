@@ -6,8 +6,7 @@ import Skills from '../../../components/Skills/Skills.jsx';
 import Attributes from '../../../components/Attributes/Attributes.jsx';
 import Proficiency from '../../../components/Proficiency/Proficiency.jsx';
 import Equipment from '../../../components/Equipment/Equipment.jsx';
-import {Row,Column,Exemplo} from './styled.js';
-import {PageContentMenuSheet} from '../../../App.js';
+import {PageContentMenuSheet ,Row,Column,Exemplo} from '../../../App.js';
 
 const AttributeCombatPage = () => {
   return (

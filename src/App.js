@@ -38,3 +38,29 @@ export const PageContentMenuSheet = styled.div`
   width: 100%; 
   padding: 25px 36px;
 `;
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: ${(props) => props.width || '0px'}; 
+  height: ${(props) => props.height || '0px'}; 
+  gap: ${(props) => props.$gap || '22px'}; 
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: ${(props) => props.width || '0px'}; 
+  height: ${(props) => props.height || '0px'}; 
+  gap: ${(props) => props.$gap || '22px'}; 
+`;
+
+
+export const Exemplo = styled.h1`
+  width: ${(props) => props.width || '0px'}; 
+  height: ${(props) => props.height || '0px'}; 
+  border: 2px solid #FF0000;
+  margin: 0;
+`;
