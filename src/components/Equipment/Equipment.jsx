@@ -11,7 +11,7 @@ import { EquipmentWrapper,
   ItemHeader,
   ItemHeaderTitle
   } from './styled';
- import  {IconButton, IconImage,AddButtonContainer} from '../StyledButtons';
+ import  {IconButton, IconImage,AddButtonContainer} from '../GlobalStyled.js';
 import CoinPCBoxImage from '../../assets/Atributos e Combates/Inputs e Selects/Input de PC.svg';
 import CoinPQBoxImage from '../../assets/Atributos e Combates/Inputs e Selects/Input de PQ.svg';
 import CoinPPBoxImage from '../../assets/Atributos e Combates/Inputs e Selects/Input de PP.svg';

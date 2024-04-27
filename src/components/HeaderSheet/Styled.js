@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import levelBoxBackground from '../../assets/Cabeçalho da Ficha/Cabeça do Dragão.svg'; 
 import NameBoxBackground from '../../assets/Cabeçalho da Ficha/Espada do Dragão.svg';
-import seta from '../../assets/Cabeçalho da Ficha/seta-select.svg'
+
 import originsBoxBackground from '../../assets/Cabeçalho da Ficha/Select de Origem.svg'
 import Background from '../../assets/Cabeçalho da Ficha/Fundo do Cabeçalho.svg'; 
 
@@ -141,7 +141,7 @@ export const SelectTitle = styled.h1`
   
 `;
 
-export const CharacterOriginsSelect = styled.select`
+/* export const CharacterOriginsSelect = styled.select`
     margin-top: 1em;
     width: 181px; 
     height: 2.4vh;
@@ -170,3 +170,4 @@ export const CharacterOriginsSelect = styled.select`
     }
 `;
 
+ */

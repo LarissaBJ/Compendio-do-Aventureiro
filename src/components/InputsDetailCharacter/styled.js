@@ -30,14 +30,14 @@ export const TitleHeader = styled.h1`
 `;
 
 export const InputContent = styled.textarea`
-    width: ${(props) => props.width || '95%'}; 
-    height: ${(props) => props.height || '75%'}; 
+    width: ${(props) => props.$width || '95%'}; 
+    height: ${(props) => props.$height || '75%'}; 
     background-color: transparent;
     border: 1px solid transparent;
     color: #890004;
     border-radius: 4px; 
-    padding: ${props => props.padding || '0 20px'};
-    margin-bottom: ${props => props.marginBottom || '10px'};
+    padding: ${props => props.$padding || '0 20px'};
+    margin-bottom: ${props => props.$marginBottom || '10px'};
     line-height: 1.5; 
     overflow-y: auto; 
     &:focus {
@@ -62,20 +62,21 @@ export const InputContent = styled.textarea`
     scrollbar-color: #890004 transparent; 
 `;
 
+
 export const Icone = styled.img`
     cursor: pointer;
 `;
 
 export const TextDisplay = styled.div`
-    width: ${(props) => props.width || '95%'}; 
+    width: ${(props) => props.$width || '95%'}; 
     background-color: transparent;
     color: #890004;
     border-radius: 4px;
-    padding: ${props => props.padding || '0 20px'};
-    margin: ${props => props.margin || '0'};
+    padding: ${props => props.$padding || '0 20px'};
+    margin: ${props => props.$margin || '0'};
     word-wrap: break-word; 
     overflow-y: auto; 
-    max-height: ${props => props.maxHeight || '75%'};
+    max-height: ${props => props.$maxHeight || '75%'};
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -93,5 +94,6 @@ export const TextDisplay = styled.div`
     scrollbar-width: thin;
     scrollbar-color: #890004 transparent;
 `;
+
 
 

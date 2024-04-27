@@ -6,15 +6,15 @@ import {
   NameBox, 
   IMG, 
   CharacterOrigins, 
-  CharacterOriginsBox, 
-  CharacterOriginsSelect,
+  CharacterOriginsBox,
   SelectTitle,
   LevelTitle,
   Level,
   HeaderLevel,
   NameTitle
 } from './Styled'; 
-import Titulo from '../../assets/Cabeçalho da Ficha/Titulo.svg'
+import { GlobalSelect } from '../GlobalStyled.js';
+import Titulo from '../../assets/Cabeçalho da Ficha/Titulo.svg';
 const HeaderSheet = () => {
   return (
     <HeaderSheetContent>
@@ -37,22 +37,22 @@ const HeaderSheet = () => {
       <CharacterOrigins>
 
         <CharacterOriginsBox>
-          <CharacterOriginsSelect name="classe"/>
+          <GlobalSelect name="classe"/>
           <SelectTitle>CLASSE</SelectTitle>
         </CharacterOriginsBox>
 
         <CharacterOriginsBox>
-            <CharacterOriginsSelect name="raca"/>  
+            <GlobalSelect name="raca"/>  
             <SelectTitle>RAÇA</SelectTitle>
         </CharacterOriginsBox>
         
         <CharacterOriginsBox>
-            <CharacterOriginsSelect name="antecedente"/> 
+            <GlobalSelect name="antecedente"/> 
             <SelectTitle>ANTECENDENTE</SelectTitle> 
         </CharacterOriginsBox>
         
         <CharacterOriginsBox>
-            <CharacterOriginsSelect name="alinhamento"/>  
+            <GlobalSelect name="alinhamento"/>  
             <SelectTitle>ALINHAMENTO</SelectTitle>
         </CharacterOriginsBox>
       

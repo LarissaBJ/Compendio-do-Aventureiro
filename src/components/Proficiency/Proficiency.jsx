@@ -8,7 +8,7 @@ import { ProficiencyWrapper,
   ProficiencyItem, 
   ProficiencySelect 
 } from './styled';
-import  {IconButton, IconImage,AddButtonContainer} from '../StyledButtons';
+import  {IconButton, IconImage,AddButtonContainer} from '../GlobalStyled.js';
 import InputSelectImage from '../../assets/Atributos e Combates/Inputs e Selects/Select de Prociencia.svg';
 import IconeButtonAddImagem from '../../assets/Atributos e Combates/Icones e Botões/Icone de Criar.svg';
 import IconeButtonDeletImagem from '../../assets/Atributos e Combates/Icones e Botões/Icone de Excluir.svg';

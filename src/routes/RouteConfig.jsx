@@ -9,6 +9,9 @@ import CharacterSheetPage from '../pages/CharacterSheetPage/CharacterSheetPage';
 import AttributeCombatPage from '../pages/TabMenuPages/AttributeCombatPage/AttributeCombatPage';
 import CharacterDetailPage from '../pages/TabMenuPages/CharacterDetailPage/CharacterDetailPage';
 import MagicConjurationPage from '../pages/TabMenuPages/MagicConjurationPage/MagicConjurationPage';
+import SpellPagination_1 from '../pages/TabMenuPages/MagicConjurationPage/SpellPagination/SpellPagination_1.jsx';
+import SpellPagination_2 from '../pages/TabMenuPages/MagicConjurationPage/SpellPagination/SpellPagination_2.jsx';
+import SpellPagination_3 from '../pages/TabMenuPages/MagicConjurationPage/SpellPagination/SpellPagination_3.jsx';
 
 
 //CONFIGURAÇÃO DE ROTAS 
@@ -51,7 +54,22 @@ export const Router = createBrowserRouter([
                 },
                 {
                     path:"/charactersheet/magicconjuration",
-                    element: <MagicConjurationPage/>
+                    element: <MagicConjurationPage/>,
+                    children:[
+                        {
+                            path:"/charactersheet/magicconjuration/SpellPagination-1",
+                            element: <SpellPagination_1/>
+                        },
+                        {
+                            path:"/charactersheet/magicconjuration/SpellPagination-2",
+                            element:<SpellPagination_2/>
+                        },
+                        {
+                            path:"/charactersheet/magicconjuration/SpellPagination-3",
+                            element:<SpellPagination_3/>
+                        }
+
+                    ]
                 }
             ]
         }
