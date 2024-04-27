@@ -29,3 +29,12 @@ export const ContentSheet = styled.div`
   display: flex;
   width: 100%; 
 `;
+
+export const PageContentMenuSheet = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%; 
+  padding: 25px 36px;
+`;

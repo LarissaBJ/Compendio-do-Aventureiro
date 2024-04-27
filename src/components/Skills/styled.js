@@ -17,6 +17,7 @@ export const SkillTitle = styled.h1`
   color: #890004;
   margin-top: 10px;
   margin-bottom: 15px;
+  text-align: center;
 `;
 export const SkillsHeader = styled.div`
   display: flex;

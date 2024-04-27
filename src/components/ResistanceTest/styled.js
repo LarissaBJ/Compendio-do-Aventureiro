@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ResistanceBoxImage from "../../assets/Atributos e Combates/Caixas de Componentes/Caixa de Teste de Resistencia.svg";
 import ResistanceValueImage from "../../assets/Atributos e Combates/Inputs e Selects/Input de Pericia.svg"
+
 export const ResistanceTestWrapper= styled.div`
   display: flex;
   flex-direction: column;
@@ -49,6 +50,7 @@ export const ResistanceTitle = styled.h1`
   color: #890004;
   margin-top: 8px;
   margin-bottom: 0;
+  text-align: center;
 `;
 
 export const ResistanceText = styled(TextBase).attrs({

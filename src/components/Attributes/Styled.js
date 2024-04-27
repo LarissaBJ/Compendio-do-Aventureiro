@@ -32,7 +32,7 @@ export const Attribute = styled.div`
 export const AttributeHeader = styled.h1`
   font-size: 12px;
   color: #890004;
-  margin: 15px 0px;
+  margin: 15px 0 0 0 ;
 `;
 
 export const AttributeModifier = styled.h1`
