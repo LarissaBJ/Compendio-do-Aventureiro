@@ -15,7 +15,7 @@ export const Row = styled.div`
   align-items: center;
   width: ${(props) => props.width || '0px'}; 
   height: ${(props) => props.height || '0px'}; 
-  gap: ${(props) => props.gap || '0px'}; 
+  gap: ${(props) => props.$gap || '22px'}; 
 `;
 
 export const Column = styled.div`
@@ -24,7 +24,7 @@ export const Column = styled.div`
   align-items: center;
   width: ${(props) => props.width || '0px'}; 
   height: ${(props) => props.height || '0px'}; 
-  gap: ${(props) => props.gap || '0px'}; 
+  gap: ${(props) => props.$gap || '22px'}; 
 `;
 
 

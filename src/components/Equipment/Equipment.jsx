@@ -77,7 +77,7 @@ const Equipment = () => {
                   value={equipment.weight}
                   onChange={(e) => handleUpdateItem(equipment.id, 'weight', e.target.value)}
                 />
-                  <IconButton justifyContent="flex-start" onClick={() => handleDeleteItem(equipment.id)}> 
+                  <IconButton $justifyContent="flex-start"  onClick={() => handleDeleteItem(equipment.id)}> 
                     <IconImage src={IconeButtonDeletImagem} alt="Deletar" />
                   </IconButton>
               </Item>

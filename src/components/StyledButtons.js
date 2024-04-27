@@ -6,7 +6,7 @@ export const IconButton = styled.button`
   background-color: transparent;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: ${(props) => props.$justifyContent || 'center'}; 
   align-items: center;
   width: ${(props) => props.width || '26px'};  
   height: ${(props) => props.height || '26px'};
