@@ -9,7 +9,7 @@ import Background from '../../assets/Cabeçalho da Ficha/Fundo do Cabeçalho.svg
 export const HeaderSheetContent = styled.div`
     position: relative; 
     flex-direction: column;
-    background-color: white;
+    background-color:white;
     margin: 0rem;
     height: 434px;
     width: 100%;

@@ -6,7 +6,7 @@ export const PageContentMenuSheet = styled.div`
   flex-direction: column;
   background-color: white;
   width: 100%; 
-  padding: 25px 45px;
+  padding: 25px 36px;
 `;
 
 export const Row = styled.div`

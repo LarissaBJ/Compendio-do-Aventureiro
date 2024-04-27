@@ -1,0 +1,14 @@
+<svg width="444" height="650" viewBox="0 0 444 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M57.507 8.67175H385.827L387.357 16.499C389.507 24.5477 393.097 31.3967 397.617 36.2327L398.667 37.1327V611.211L397.617 612.111C393.097 616.947 389.507 623.796 387.357 631.845L385.827 639.672H57.507L55.9771 631.845C53.8271 623.796 50.237 616.947 45.717 612.111L44.667 611.211V37.1327L45.717 36.2327C50.237 31.3967 53.8271 24.5477 55.9771 16.499L57.507 8.67175Z" fill="white" stroke="#FF0000" stroke-width="3" stroke-miterlimit="8"/>
+<path d="M56.167 16.1716L387.177 16.1717" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path d="M56.667 631.672H387.677" stroke="#FF0000" stroke-width="1.33333" stroke-miterlimit="8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M44.167 55.4866C44.167 33.7736 61.7669 16.1716 83.4869 16.1716H358.847C380.567 16.1716 398.167 33.7736 398.167 55.4866V591.857C398.167 613.57 380.567 631.172 358.847 631.172H83.4869C61.7669 631.172 44.167 613.57 44.167 591.857V55.4866Z" fill="white" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.967 38.6716H425.167L441.667 55.1706V593.173L425.167 609.672H17.967L1.66699 593.372V54.9716L17.967 38.6716Z" fill="white" stroke="#FF0000" stroke-width="3" stroke-miterlimit="8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.16699 78.7126C1.16699 56.3226 19.317 38.1716 41.707 38.1716H400.627C423.017 38.1716 441.167 56.3226 441.167 78.7126V568.631C441.167 591.021 423.017 609.172 400.627 609.172H41.707C19.317 609.172 1.16699 591.021 1.16699 568.631V78.7126Z" fill="white" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path d="M7.16699 59.1716V588.052" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path d="M435.167 59.1716V588.052" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M221.167 1.17163C250.197 1.17163 275.617 11.0821 289.667 25.9186L297.167 38.1716H145.167L152.667 25.9186C166.717 11.0821 192.137 1.17163 221.167 1.17163Z" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path d="M148.167 33.1716H294.567" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M221.167 648.172C250.198 648.172 275.622 637.993 289.67 622.756L297.167 610.172H145.167L152.664 622.756C166.712 637.993 192.136 648.172 221.167 648.172Z" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+<path d="M148.167 615.172L294.567 615.172" stroke="#FF0000" stroke-width="2" stroke-miterlimit="8"/>
+</svg>

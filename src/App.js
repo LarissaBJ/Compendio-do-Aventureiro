@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const PageContenier = styled.div`
   color: #890004; 
   background-color: transparent;
