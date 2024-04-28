@@ -52,26 +52,6 @@ export const AttSpellHeaderWrapper = styled.div`
   flex-direction: row;
 `;
 
-export const AttSpellList = styled.div`
-  list-style: none;
-  display: flex; 
-  flex-direction: column;
-  align-items: center; 
-  width: 100%; 
-  padding:0;
-  margin: 10px 0;
-  max-height: 270px;
-  overflow-y: auto; 
-  overflow-x: hidden;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  scrollbar-width: none; 
-
-  -ms-overflow-style: none;
-`;
-
 export const AttSpell = styled.div`
   display: flex;
   width: auto;
@@ -107,5 +87,14 @@ export const AttSpellText = styled.h2`
   margin: 0 8px 0 0;
   font-size: 17px;
   font-weight: 400;
+  align-content: center;
 `;
 
+
+export const BtnAddDel = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 7px 0 15px;
+  align-content: center;
+`;

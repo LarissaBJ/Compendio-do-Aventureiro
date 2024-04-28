@@ -6,8 +6,8 @@ import {
     AttSpellElementWrapper,
     AttSpellHeaderText,
     AttSpellHeaderWrapper,
-    AttSpellList, AttSpellSelect, AttSpellText,
-    AttSpellTittle
+    AttSpellSelect, AttSpellText,
+    AttSpellTittle, BtnAddDel
 } from "./styled.js";
 import BonusBoxImage from "../../assets/Atributos e Combates/Inputs e Selects/Input 6.svg";
 import DamageBoxImage from "../../assets/Atributos e Combates/Inputs e Selects/Input 5.svg";
@@ -84,7 +84,7 @@ const AttacksAndSpellcasting = () => {
                 ))}
             </AttSpellElementWrapper>
 
-            <div>
+            <BtnAddDel>
                 <IconButton onClick={handleAddAttack}>
                     <IconImage src={IconeButtonAddImagem} alt="Deletar" />
                 </IconButton>
@@ -92,7 +92,7 @@ const AttacksAndSpellcasting = () => {
                 <IconButton>
                     <IconImage src={IconeButtonDelImage} alt="Deletar" />
                 </IconButton>
-            </div>
+            </BtnAddDel >
 
         </AttSpellBox>
 

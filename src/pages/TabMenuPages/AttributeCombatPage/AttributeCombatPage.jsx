@@ -11,55 +11,56 @@ import Inspiration from "../../../components/Inspiration/Inspiration.jsx";
 import ProficiencyBonus from "../../../components/ProficiencyBonus/ProficiencyBonus.jsx";
 import DeathSaves from "../../../components/DeathSaves/DeathSaves.jsx";
 import HitDice from "../../../components/HitDice/HitDice.jsx";
+import AttacksAndSpellcasting from "../../../components/AttacksAndSpellcasting/AttacksAndSpellcasting.jsx";
 
 const AttributeCombatPage = () => {
   return (
-    <PageContentMenuSheet>
-      <Column $width="997px" $height="1519.5px">
-        <Row $width="997px" $height="1063.51px">
-          <Attributes/>
-          <Column $gap="7px" $width="821px" $height="1058px">
-            <Row  $width="818px" $height="192px" >
-              <Life/>
-              <Defense/>
-            </Row>
+      <PageContentMenuSheet>
+        <Column $width="997px" $height="1519.5px">
+          <Row $width="997px" $height="1063.51px">
+            <Attributes/>
+            <Column $gap="7px" $width="821px" $height="1058px">
+              <Row  $width="818px" $height="192px" >
+                <Defense/>
+                <Life/>
+              </Row>
 
-            <Row $gap="11px" $width="811px" $height="859px">
+              <Row $gap="11px" $width="811px" $height="859px">
 
-              <Column  $width="260px" $height="838px">
-                <ResistanceTest/>
-                <Skills/>
-              </Column>
-
-              <Column $gap="42px" $width="540px" $height="859px">
-                <Column $gap="9px" $width="540px" $height="227.5px">
-
-                  <Row $gap='25px' $width='540px' $height='87.06px'>
-                    <Inspiration/>
-                    <ProficiencyBonus/>
-                  </Row>
-
-                  <Row $gap='14px' $width='348px' $height='130px' style={{alignSelf: "flex-start"}}>
-                    <DeathSaves/>
-                    <HitDice/>
-                  </Row>
+                <Column  $width="260px" $height="838px">
+                  <ResistanceTest/>
+                  <Skills/>
                 </Column>
 
-                <Exemplo $width="540px" $height="590px">Ataques e conjuração</Exemplo>
-              </Column>
-            </Row>
-          </Column>
-        </Row>
+                <Column $gap="21px" $width="540px" $height="859px">
+                  <Column $gap="9px" $width="540px" $height="227.5px">
 
-        <Row $gap="23px" $width="991px" $height="420.5px"> 
-          <Proficiency/>
-          <Equipment/>
-          <Exemplo $width="265px" $height="410px">Habilidades e Traços</Exemplo>
-        </Row>
-      </Column>
-      
+                    <Row $gap='25px' $width='540px' $height='87.06px'>
+                      <Inspiration/>
+                      <ProficiencyBonus/>
+                    </Row>
 
-    </PageContentMenuSheet>
+                    <Row $gap='14px' $width='348px' $height='130px' style={{alignSelf: "flex-start"}}>
+                      <DeathSaves/>
+                      <HitDice/>
+                    </Row>
+
+                  </Column>
+                  <AttacksAndSpellcasting/>
+
+                </Column>
+              </Row>
+            </Column>
+          </Row>
+
+          <Row $gap="23px" $width="991px" $height="420.5px">
+            <Proficiency/>
+            <Equipment/>
+            <Exemplo $width="265px" $height="410px">Habilidades e Traços</Exemplo>
+          </Row>
+        </Column>
+
+      </PageContentMenuSheet>
   );
 };
 
