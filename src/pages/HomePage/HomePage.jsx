@@ -1,10 +1,23 @@
 import React from 'react';
+import {PageContenier,BoxOptionContenier,HomePageContent} from '../../App.js';
+import CreateBoxOption from '../../components/HomeComponents/CreateBoxOption.jsx';
+import ManegeBoxOption from '../../components/HomeComponents/ManegeBoxOption.jsx'
+import Banner from '../../components/HomeComponents/Banner.jsx';
+
 
 const HomePage = () => {
     return (
-        <div>
-            <h1>HOME PAGE</h1>
-        </div>
+        <PageContenier>
+            <HomePageContent>
+                <Banner/>
+                <BoxOptionContenier>
+                    <CreateBoxOption/>
+                    <ManegeBoxOption/>
+                </BoxOptionContenier>
+            </HomePageContent>
+          
+         
+        </PageContenier>
     );
 };
 

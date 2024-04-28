@@ -65,3 +65,21 @@ export const Exemplo = styled.h1`
   border: 2px solid #FF0000;
   margin: 0;
 `;
+
+export const BoxOptionContenier = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:1105px;
+  height: 798px;
+  margin-bottom: 73px;
+`;
+export const HomePageContent = styled.div`
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  flex: 1;
+  font-family: "Amethysta";
+`;
+

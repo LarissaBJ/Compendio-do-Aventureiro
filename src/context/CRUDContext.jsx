@@ -38,6 +38,7 @@ export const CRUDProvider = ({ children }) => {
     setProficiencies(proficiencies.filter(proficiency => proficiency.id !== id));
   };
 
+
   return (
     <CRUDContext.Provider value={{ equipments, addEquipment, updateEquipment, deleteEquipment, proficiencies, addProficiency, updateProficiency, deleteProficiency }}>
       {children}
