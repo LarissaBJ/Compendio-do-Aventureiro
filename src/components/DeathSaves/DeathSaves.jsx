@@ -31,7 +31,6 @@ const DeathSaves = () => {
                     <DeathSavesText>FALHAS</DeathSavesText>
 
                     <DeathSavesButtonsWrapper>
-                        {/*<img className="img-death-saves-buttons" src={ResistanceValueImage} alt="input de Teste de resistencias" style={{ alignSelf: 'center' }} />*/}
                         <DeathSavesCheckBox/>
                         <DeathSavesCheckBox/>
                         <DeathSavesCheckBox/>

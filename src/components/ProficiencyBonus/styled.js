@@ -10,6 +10,7 @@ export const ProficiencyWrapper = styled.div`
   align-items: center;
   width: 253px;
   height: 61px;
+  align-self: center;
 `;
 
 export const  ProficiencyElementsWrapper = styled.div`

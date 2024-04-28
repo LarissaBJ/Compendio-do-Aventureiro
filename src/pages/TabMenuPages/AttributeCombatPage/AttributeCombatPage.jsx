@@ -7,6 +7,10 @@ import Attributes from '../../../components/Attributes/Attributes.jsx';
 import Proficiency from '../../../components/Proficiency/Proficiency.jsx';
 import Equipment from '../../../components/Equipment/Equipment.jsx';
 import {PageContentMenuSheet ,Row,Column,Exemplo} from '../../../App.js';
+import Inspiration from "../../../components/Inspiration/Inspiration.jsx";
+import ProficiencyBonus from "../../../components/ProficiencyBonus/ProficiencyBonus.jsx";
+import DeathSaves from "../../../components/DeathSaves/DeathSaves.jsx";
+import HitDice from "../../../components/HitDice/HitDice.jsx";
 
 const AttributeCombatPage = () => {
   return (
@@ -28,8 +32,20 @@ const AttributeCombatPage = () => {
               </Column>
 
               <Column $gap="42px" $width="540px" $height="859px">
-                <Exemplo $width="540px" $height="227.5px">Ataques e conjuração</Exemplo>
-                <Exemplo $width="540px" $height="590px">SalvaGuardas</Exemplo>
+                <Column $gap="9px" $width="540px" $height="227.5px">
+
+                  <Row $gap='25px' $width='540px' $height='87.06px'>
+                    <Inspiration/>
+                    <ProficiencyBonus/>
+                  </Row>
+
+                  <Row $gap='14px' $width='348px' $height='130px' style={{alignSelf: "flex-start"}}>
+                    <DeathSaves/>
+                    <HitDice/>
+                  </Row>
+                </Column>
+
+                <Exemplo $width="540px" $height="590px">Ataques e conjuração</Exemplo>
               </Column>
             </Row>
           </Column>
@@ -42,10 +58,7 @@ const AttributeCombatPage = () => {
         </Row>
       </Column>
       
-      
-      
-      
-     
+
     </PageContentMenuSheet>
   );
 };

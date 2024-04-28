@@ -10,11 +10,12 @@ export const useCRUD = () => useContext(CRUDContext);
 export const CRUDProvider = ({ children }) => {
   const [equipments, setEquipments] = useState([]);
   const [proficiencies, setProficiencies] = useState([]);
+  const [attacks, setAttacks] = useState([]);
 
   //------------------------------------------------------------------------------------------------------------------------------------------------
   // Funções para Equipamentos
   const addEquipment = (equipment) => {
-    setEquipments([...equipments, { ...equipment, id: equipments.length }]);
+    setEquipments([...equipments, {...equipment, id: equipments.length}]);
   };
 
   const updateEquipment = (id, updatedEquipment) => {
@@ -27,7 +28,7 @@ export const CRUDProvider = ({ children }) => {
   //------------------------------------------------------------------------------------------------------------------------------------------------
   // Funções para Proficiências
   const addProficiency = (proficiency) => {
-    setProficiencies([...proficiencies, { ...proficiency, id: proficiencies.length }]);
+    setProficiencies([...proficiencies, {...proficiency, id: proficiencies.length}]);
   };
 
   const updateProficiency = (id, updatedProficiency) => {
@@ -38,10 +39,28 @@ export const CRUDProvider = ({ children }) => {
     setProficiencies(proficiencies.filter(proficiency => proficiency.id !== id));
   };
 
+  //------------------------------------------------------------------------------------------------------------------------------------------------
+  // Funções para Ataques
+  const addAttack = (attack) => {
+    setAttacks([...attacks, {...attack, id: attacks.length}]);
+  };
+
+  const updateAttack = (id, updatedAttack) => {
+    setAttacks(attacks.map(attack => attack.id === id ? updatedAttack : attack));
+  };
+
+  const deleteAttack = (id) => {
+    setAttacks(attacks.filter(attack => attack.id !== id));
+  };
+  //------------------------------------------------------------------------------------------------------------------------------------------------
 
   return (
-    <CRUDContext.Provider value={{ equipments, addEquipment, updateEquipment, deleteEquipment, proficiencies, addProficiency, updateProficiency, deleteProficiency }}>
-      {children}
-    </CRUDContext.Provider>
+      <CRUDContext.Provider value={{
+        equipments, addEquipment, updateEquipment, deleteEquipment,
+        proficiencies, addProficiency, updateProficiency, deleteProficiency,
+        attacks, addAttack, updateAttack, deleteAttack
+      }}>
+        {children}
+      </CRUDContext.Provider>
   );
 };

@@ -38,8 +38,7 @@ export const DeathSavesTitle = styled.h1`
   height: 21px;
   color: #890004;
   font-weight: 800;
-  margin-top: 14px;
-  margin-bottom: 0;
+  margin: 14px 0 0 19.5px;
 `;
 
 export const DeathSavesText = styled(TextBase).attrs({
