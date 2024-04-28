@@ -4,12 +4,12 @@ import InputSelectImage from "../../assets/Atributos e Combates/Inputs e Selects
 
 export const AttSpellBox = styled.div`
   background-image: url(${AttSpellBoxImage});
-  width: 544px; 
-  height: 595px; 
+  width: 544px;
+  height: 595px;
   color: #fff;
   padding: 10px 18px 18px 18px;
   box-sizing: border-box;
-  position: relative; 
+  position: relative;
   font-weight: 700;
 `;
 
@@ -82,12 +82,13 @@ export const AttSpellSelect = styled.input`
 
 export const AttSpellText = styled.h2`
   background-image: url(${props => props.$image});
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
-  text-align: center;
   margin: 0 8px 0 0;
   font-size: 17px;
   font-weight: 400;
-  align-content: center;
 `;
 
 

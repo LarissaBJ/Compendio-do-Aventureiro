@@ -12,6 +12,7 @@ import ProficiencyBonus from "../../../components/ProficiencyBonus/ProficiencyBo
 import DeathSaves from "../../../components/DeathSaves/DeathSaves.jsx";
 import HitDice from "../../../components/HitDice/HitDice.jsx";
 import AttacksAndSpellcasting from "../../../components/AttacksAndSpellcasting/AttacksAndSpellcasting.jsx";
+import AbilityAndCharacteristics from "../../../components/AbilityAndCharacteristics/AbilityAndCharacteristics.jsx";
 
 const AttributeCombatPage = () => {
   return (
@@ -53,10 +54,10 @@ const AttributeCombatPage = () => {
             </Column>
           </Row>
 
-          <Row $gap="23px" $width="991px" $height="420.5px">
-            <Proficiency/>
-            <Equipment/>
-            <Exemplo $width="265px" $height="410px">Habilidades e Traços</Exemplo>
+          <Row $gap="21px" $width="991px" $height="420.5px">
+              <Proficiency/>
+              <Equipment/>
+              <AbilityAndCharacteristics $width="268px" $height="414px"/>
           </Row>
         </Column>
 
