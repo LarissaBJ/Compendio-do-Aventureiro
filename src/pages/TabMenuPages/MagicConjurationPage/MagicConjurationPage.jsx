@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import React from 'react';
+import { Outlet, useParams } from 'react-router-dom';
 import { PageContentMenuSheet, ContentSheet } from '../../../App.js';
 import MagicHeader from '../../../components/MagicHeader/MagicHeader.jsx';
 
 const MagicConjurationPage = () => {
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        navigate('/charactersheet/magicconjuration/SpellPagination-1');
-    }, [navigate]);  
+    const { userId } = useParams(); 
     return (
         <PageContentMenuSheet>
-            <MagicHeader/>
+            <MagicHeader serId={userId}/>
             <ContentSheet>
                 <Outlet/>
             </ContentSheet>  

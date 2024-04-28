@@ -1,12 +1,18 @@
 import React from 'react';
-import { ThinMenu, MenuItem, MenuLink } from '../Styled'; // Importe o Styled Components
+import { ThinMenu, MenuItem, MenuLink } from '../Styled'; 
 
-const MenuNavBar = () => {
+const MenuNavBar = ({ userId }) => {
   return (
     <ThinMenu>
-      <MenuItem><MenuLink to="/charactersheet/attributecombat">Atributos & Combate</MenuLink></MenuItem>
-      <MenuItem><MenuLink to="/charactersheet/characterdetail">Detalhes do Personagem</MenuLink></MenuItem>
-      <MenuItem><MenuLink to="/charactersheet/magicconjuration">Magias & Conjuração</MenuLink></MenuItem>
+      <MenuItem>
+        <MenuLink to={`/home/${userId}/charactersheet/attributecombat`}>Atributos & Combate</MenuLink>
+      </MenuItem>
+      <MenuItem>
+        <MenuLink to={`/home/${userId}/charactersheet/characterdetail`}>Detalhes do Personagem</MenuLink>
+      </MenuItem>
+      <MenuItem>
+        <MenuLink to={`/home/${userId}/charactersheet/magicconjuration`}>Magias & Conjuração</MenuLink>
+      </MenuItem>
     </ThinMenu>
   );
 };

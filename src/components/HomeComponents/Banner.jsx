@@ -1,4 +1,3 @@
-// Banner.jsx
 import React from 'react';
 import { MainBanner, BannerTitle, BannerContent, Paragrafo } from './Styled';
 

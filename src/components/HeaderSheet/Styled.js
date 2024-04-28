@@ -140,34 +140,3 @@ export const SelectTitle = styled.h1`
     margin: 0em;
   
 `;
-
-/* export const CharacterOriginsSelect = styled.select`
-    margin-top: 1em;
-    width: 181px; 
-    height: 2.4vh;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #890004;
-    color: #890004;
-    padding: 0.5em; 
-    cursor: pointer;
-
-    background-image: url(${seta});
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center;
-    background-size: 10px 8px;
-
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    appearance: none;
-
-    &:focus {
-        outline: none;
-    }
-  
-    &::-ms-expand {
-        display: none; 
-    }
-`;
-
- */

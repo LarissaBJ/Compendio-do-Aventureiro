@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import AttSpellBoxImage from "../../assets/Atributos e Combates/Caixas de Componentes/Caixa de Ataque.svg";
-// import InputSelectImage from "../../assets/Atributos e Combates/Inputs e Selects/Select de Prociencia.svg";
 import InputSelectImage from "../../assets/Atributos e Combates/Inputs e Selects/Input 2.svg"
 
 export const AttSpellBox = styled.div`

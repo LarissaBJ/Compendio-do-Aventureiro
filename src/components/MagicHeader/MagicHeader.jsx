@@ -4,15 +4,17 @@ import { HeaderMagicContent, InfoMagicBox, Value, Pagination, Linha, Button, Img
 import SetaToPrevious from '../../assets/Magias e Conjuracoes/Icones e Botões/Icone Seta Esquerda.svg';
 import SetaToNext from '../../assets/Magias e Conjuracoes/Icones e Botões/Icone Seta direita.svg';
 import {GlobalSelect} from '../GlobalStyled.js'
-const MagicHeader = () => {
+const MagicHeader = ({ userId }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const navigate = useNavigate();
+    
 
     const goToNextPage = () => {
         if(currentPage < 3) {
             const nextPage = currentPage + 1;
             setCurrentPage(nextPage);
-            navigate(`/charactersheet/magicconjuration/SpellPagination-${nextPage}`);
+            navigate(`/home/${userId}/charactersheet/magicconjuration/SpellPagination-${nextPage}`);
+          
         }
     };
 
@@ -20,7 +22,7 @@ const MagicHeader = () => {
         if(currentPage > 1) {
             const prevPage = currentPage - 1;
             setCurrentPage(prevPage);
-            navigate(`/charactersheet/magicconjuration/SpellPagination-${prevPage}`);
+            navigate(`/home/${userId}/charactersheet/magicconjuration/SpellPagination-${nextPage}`);
         }
     };
 

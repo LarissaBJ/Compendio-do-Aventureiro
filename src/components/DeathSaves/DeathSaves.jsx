@@ -45,4 +45,3 @@ const DeathSaves = () => {
 
 export default DeathSaves;
 
-// https://www.figma.com/file/z0M5TnSHYhXhDT9cOpKff1/GERENCIADOR_DE_PERSONAGENS_D%26D?type=design&node-id=143-3985&mode=design&t=sAipGcSg36HiFULL-4

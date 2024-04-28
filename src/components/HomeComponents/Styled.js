@@ -27,9 +27,10 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 1.2em;
+  font-size: 18px;
   color: #FFF;
   margin: 0;
+  font-family: "Amethysta";
 `;
 
 export const CreateButton = styled.button`

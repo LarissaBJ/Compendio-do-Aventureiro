@@ -1,12 +1,9 @@
 import React, { createContext, useState, useContext } from 'react';
 
-// Criando o contexto
 export const CRUDContext = createContext();
 
-// Hook personalizado para usar o contexto de equipamentos e proficiências
 export const useCRUD = () => useContext(CRUDContext);
 
-// Provedor de contexto
 export const CRUDProvider = ({ children }) => {
   const [equipments, setEquipments] = useState([]);
   const [proficiencies, setProficiencies] = useState([]);
