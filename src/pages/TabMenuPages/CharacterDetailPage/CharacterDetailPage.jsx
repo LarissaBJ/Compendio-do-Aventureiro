@@ -5,6 +5,9 @@ import Ideals from '../../../components/InputsDetailCharacter/Ideals.jsx';
 import History from '../../../components/InputsDetailCharacter/History.jsx';
 import PersonalityTraits from '../../../components/InputsDetailCharacter/PersonalityTraits.jsx';
 import AdditionalFeaturesAndTraits from '../../../components/InputsDetailCharacter/AdditionalFeaturesAndTraits.jsx';
+import Bonds from "../../../components/InputsDetailCharacter/Bonds.jsx";
+import Weaknesses from "../../../components/InputsDetailCharacter/Weaknesses.jsx";
+import Treasures from "../../../components/InputsDetailCharacter/Treasures.jsx";
 const CharacterDetailPage = () => {
     return (
         <PageContentMenuSheet>
@@ -14,8 +17,9 @@ const CharacterDetailPage = () => {
                     <Column $gap="23px" $width="516px" $height="647px"> 
                         <PersonalityTraits/>
                         <Ideals/>
-                        <Exemplo $width="514px" $height="129px">VÍNCULOS</Exemplo>
-                        <Exemplo $width="514px" $height="152px">FRAQUEZAS</Exemplo>
+
+                        <Bonds/>
+                        <Weaknesses/>
                     </Column>
                 </Row>
 
@@ -26,7 +30,7 @@ const CharacterDetailPage = () => {
 
                 <Row $gap="28px" $width="988.5px" $height="485.5px">
                     <AdditionalFeaturesAndTraits/>
-                    <Exemplo $width="510.5px" $height="484.5px">TESOURO</Exemplo>
+                    <Treasures/>
                 </Row>
             </Column>
         </PageContentMenuSheet>
