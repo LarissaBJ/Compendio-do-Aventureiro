@@ -62,21 +62,21 @@ const AttacksAndSpellcasting = () => {
                 {attacks.map((attack) => (
                     <AttSpell key={attack.id}>
                         <AttSpellSelect
-                            value={"Fireball"}
+                            type="text"
                             onChange={(e) => handleUpdateAttack(attacks.id, 'name', e.target.value)}
                         />
                         <AttSpellText
                             $image={BonusBoxImage}
-                            style={{width: '80px', height: '46px'}}
-                        >{2}</AttSpellText>
+                            style={{width: '76px', height: '44px'}}
+                        />
                         <AttSpellText
                             $image={DamageBoxImage}
-                            style={{width: '80px', height: '46px'}}
-                        >{"3d6"}</AttSpellText>
+                            style={{width: '76px', height: '44px'}}
+                        />
                         <AttSpellText
                             $image={BonusBoxImage}
-                            style={{width: '80px', height: '46px'}}
-                        >{"fire"}</AttSpellText>
+                            style={{width: '76px', height: '44px'}}
+                        />
                         <IconButton onClick={() => handleDeleteAttack(attack.id)}>
                             <IconImage src={IconeButtonDelImage} alt="Deletar" />
                         </IconButton>

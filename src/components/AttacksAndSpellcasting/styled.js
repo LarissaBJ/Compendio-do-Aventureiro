@@ -80,7 +80,7 @@ export const AttSpellSelect = styled.input`
   }
 `;
 
-export const AttSpellText = styled.h2`
+export const AttSpellText = styled.input`
   background-image: url(${props => props.$image});
   display: flex;
   align-items: center;
@@ -89,6 +89,9 @@ export const AttSpellText = styled.h2`
   margin: 0 8px 0 0;
   font-size: 17px;
   font-weight: 400;
+  background-color: unset;
+  border: unset;
+  text-align: center;
 `;
 
 

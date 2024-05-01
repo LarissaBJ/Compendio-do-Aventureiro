@@ -22,7 +22,7 @@ const MagicHeader = ({ userId }) => {
         if(currentPage > 1) {
             const prevPage = currentPage - 1;
             setCurrentPage(prevPage);
-            navigate(`/home/${userId}/charactersheet/magicconjuration/SpellPagination-${nextPage}`);
+            navigate(`/home/${userId}/charactersheet/magicconjuration/SpellPagination-${prevPage}`);
         }
     };
 
