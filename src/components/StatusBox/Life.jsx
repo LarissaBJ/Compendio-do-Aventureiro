@@ -1,16 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CharacterSheetContext } from '../../context/CharacterSheetContext';
-import { StatusWrapper, StatusTitle, StatusBoxWrapper, StatusBox, StatusSubTitle, StatusValue, StatusShieldBox, StatusShieldTitle } from './styled';
+import { StatusWrapper, StatusTitle, StatusBoxWrapper, StatusBox, StatusSubTitle, StatusValue, StatusShieldBox, StatusShieldTitle, StatusInput } from './styled';
 import LifeShieldBoxValueImage from '../../assets/Atributos e Combates/Inputs e Selects/Input de Vida.svg';
 
 const Life = () => {
-    const { characterSheet } = useContext(CharacterSheetContext);
+    const { characterSheet, updateTemporaryHitPoints } = useContext(CharacterSheetContext);
     const { hitPoints, temporaryHitPoints } = characterSheet.attributeAndCombat;
 
-    // Convertendo valores para exibição e evitando NaN
+    const [tempHitPoints, setTempHitPoints] = useState(temporaryHitPoints || 0);
+
+    const handleTempHitPointsChange = (e) => {
+        const newTempHitPoints = parseInt(e.target.value, 10) || 0;
+        setTempHitPoints(newTempHitPoints);
+        updateTemporaryHitPoints(newTempHitPoints);  // Assuming you have such a function to update context
+    };
+
+    // Ensure numerical values for display
     const maximaDisplay = isNaN(hitPoints) ? 'Erro' : hitPoints;
-    const temporariaDisplay = isNaN(temporaryHitPoints) ? 'Erro' : temporaryHitPoints;
-    const atualDisplay = maximaDisplay + (temporariaDisplay || 0);  // Soma a vida temporária à máxima, garantindo que não é NaN.
+    const atualDisplay = maximaDisplay + tempHitPoints;
 
     return (
       <StatusWrapper>
@@ -26,7 +33,11 @@ const Life = () => {
           </StatusShieldBox>
           <StatusBox>
             <StatusSubTitle>Temporária</StatusSubTitle>
-            <StatusValue>{temporariaDisplay}</StatusValue>
+            <StatusInput 
+              type="number"
+              value={tempHitPoints}
+              onChange={handleTempHitPointsChange}
+            />
           </StatusBox>
         </StatusBoxWrapper>
       </StatusWrapper>

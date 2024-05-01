@@ -71,5 +71,23 @@ export const StatusTitle = styled(TextBase).attrs({
 })``;
 
 
+export const StatusInput = styled.input`
+  font-size: 25px; 
+  font-weight:bold;
+  color: #890004;
+  margin-top: 10px;
+  width: 110px;
+  border: none;
+  text-align: center;
+  background: transparent;
+  outline: none;
+  appearance: none; 
+  -webkit-appearance: none; 
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
+`;
