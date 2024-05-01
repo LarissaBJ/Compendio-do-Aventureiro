@@ -90,7 +90,25 @@ const initialCharacterSheet = {
 };
 
 export const CharacterSheetProvider = ({ children }) => {
-  const [characterSheet, setCharacterSheet] = useState(initialCharacterSheet);
+  const [characterSheet, setCharacterSheet] = useState({}); 
+
+  const createCharacterSheet = (characterData) => {
+    const newId = Math.random().toString(36).substr(2, 9);
+    const newSheet = {
+      ...initialCharacterSheet,
+      headerDetails: {
+        ...initialCharacterSheet.headerDetails,
+        class: characterData.clazz,
+        race: characterData.race,
+        alignment: characterData.alignment,
+        background: characterData.background,
+        name: characterData.name,
+        level: 1
+      }
+    };
+    setCharacterSheet(prevSheets => ({ ...prevSheets, [newId]: newSheet })); // Correção na função
+    return newId;
+  };
 
   const updateInputsCharacterDetails = (key, value) => {
     setCharacterSheet(prev => ({
@@ -276,6 +294,8 @@ const updateAttributeAndCombat = (data) => {
   return (
     <CharacterSheetContext.Provider value={{
       characterSheet,
+      getCharacterSheet: (id) => sheets[id],
+      createCharacterSheet,
       updateAttributes,
       updateSkills,
       updateHeaderDetails,

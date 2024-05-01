@@ -83,3 +83,14 @@ export const HomePageContent = styled.div`
   font-family: "Amethysta";
 `;
 
+export const ViewCharacterList = styled.div`
+  background-color: white;
+  width: 1080px;
+  height: 920px;
+  justify-content: top;
+  display: flex;
+  flex-direction: column; /* Change this from row to column */
+  align-items: center; /* This will center your items horizontally */
+  overflow-y: auto; /* Adds scroll if content overflows */
+`;
+
