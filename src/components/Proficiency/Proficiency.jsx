@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCRUD } from '../../context/CRUDContext';
+import { useCRUD } from '../../context/CRUDContext.jsx';
 import { ProficiencyWrapper,
   ProficiencyTitle,
   ProficiencyHeader,

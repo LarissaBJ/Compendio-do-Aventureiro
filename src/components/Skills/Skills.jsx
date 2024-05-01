@@ -1,42 +1,32 @@
-import React from 'react';
-import InputPericiaImagem from '../../assets/Atributos e Combates/Inputs e Selects/Input de Pericias.svg';
-import {SkillsWrapper,
-  SkillsHeader ,
+import React, { useContext } from 'react';
+import { CharacterSheetContext } from '../../context/CharacterSheetContext.jsx';
+import {
+  SkillsWrapper,
+  SkillsHeader,
   SkillItem,
   CheckBox,
   ModTitle,
   ModBox,
   LabelName,
-  LabelAttribute ,
+  LabelAttribute,
   LabelHeaderAttribute,
   LabelHeaderName,
   LabelHeaderMod,
   SkillTitle
 } from './styled';
+import InputPericiaImagem from '../../assets/Atributos e Combates/Inputs e Selects/Input de Pericias.svg';
 
 const Skills = () => {
+  const { characterSheet, updateSkills } = useContext(CharacterSheetContext);
 
-    const skills = [
-      { name: 'Acrobacia', attribute: 'DES' },
-      { name: 'Arcanismo', attribute: 'INT' },
-      { name: 'Atletismo', attribute: 'FOR' },
-      { name: 'Atuação', attribute: 'CAR' },
-      { name: 'Enganação', attribute: 'CAR' },
-      { name: 'Furtividade', attribute: 'DES' },
-      { name: 'História', attribute: 'INT' },
-      { name: 'Intimidação', attribute: 'CAR' },
-      { name: 'Intuição', attribute: 'SAB' },
-      { name: 'Investigação', attribute: 'INT' },
-      { name: 'Lidar com Animais', attribute: 'SAB' },
-      { name: 'Medicina', attribute: 'SAB' },
-      { name: 'Natureza', attribute: 'INT' },
-      { name: 'Percepção', attribute: 'SAB' },
-      { name: 'Persuasão', attribute: 'CAR' },
-      { name: 'Prestidigitação', attribute: 'DES' },
-      { name: 'Religião', attribute: 'INT' },
-      { name: 'Sobrevivência', attribute: 'SAB' }
-    ];
-
+  // Função para lidar com as mudanças no checkbox das perícias
+  const handleCheckboxChange = (index) => {
+    // A obtenção do estado atual da seleção e a inversão dele
+    const isSelected = !characterSheet.attributeAndCombat.skills[index].isSelected;
+    // Chamada para a função updateSkills do contexto com o novo estado da seleção
+    updateSkills(index, isSelected);
+  };
+  
   return (
     <SkillsWrapper>
       <SkillTitle>PERÍCIAS</SkillTitle>
@@ -45,19 +35,20 @@ const Skills = () => {
         <LabelHeaderName>Nome</LabelHeaderName>
         <LabelHeaderAttribute>Atributo</LabelHeaderAttribute>
       </SkillsHeader>
-
-      {skills.map(skill => (
-
+      {characterSheet.attributeAndCombat.skills.map((skill, index) => (
         <SkillItem key={skill.name}>
-          <CheckBox />
+          <CheckBox
+            type="checkbox"
+            checked={skill.isSelected}
+            onChange={() => handleCheckboxChange(index)}
+          />
           <ModBox>
-            <ModTitle>0</ModTitle>
-            <img src={InputPericiaImagem} alt="input de pericias" style={{ alignSelf: 'center' }} />
+            <ModTitle>{skill.totalMod}</ModTitle>
+            <img src={InputPericiaImagem} alt="input de perícias" style={{ alignSelf: 'center' }} />
           </ModBox>
           <LabelName>{skill.name}</LabelName>
-          <LabelAttribute>{skill.attribute}</LabelAttribute>
+          <LabelAttribute>{skill.abrev}</LabelAttribute>
         </SkillItem>
-
       ))}
     </SkillsWrapper>
   );

@@ -46,10 +46,12 @@ export const GlobalSelect = styled.select`
     background-color: transparent;
     border: none;
     border-bottom: ${(props) => props.$borderBottom || '1px solid #890004'};
-    color: #890004;
+    color: #FF4B50;
+    font-family: "Amethysta";
     padding: ${(props) => props.$padding || '0.5em'}; 
     cursor: pointer;
-
+    text-align: center;
+    font-size: 17px;
     background-image: url(${seta});
     background-repeat: no-repeat;
     background-position: right 0.5rem center;
@@ -66,4 +68,10 @@ export const GlobalSelect = styled.select`
     &::-ms-expand {
         display: none; 
     }
+`;
+
+export const OptionGlobal = styled.option `
+   color: #FF4B50;
+   font-family: "Amethysta";
+   border-radius: none;
 `;

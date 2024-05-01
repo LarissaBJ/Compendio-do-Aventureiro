@@ -1,30 +1,34 @@
-import React from 'react';
-import { AttributesContainer, Attribute,  AttributeModifier,AttributeHeader,AttributeValue } from './Styled';
+import React, { useContext } from 'react';
+import { CharacterSheetContext } from '../../context/CharacterSheetContext.jsx';
+import { AttributesContainer, Attribute, AttributeModifier, AttributeHeader, AttributeValue } from './Styled';
 
 const Attributes = () => {
+  const { characterSheet, updateAttributes } = useContext(CharacterSheetContext);
 
-  const attributes = [
-    { name: 'FORÇA', modifier: 0, value: 10 },
-    { name: 'DESTREZA', modifier: 0 , value: 10},
-    { name: 'CONSTITUIÇÃO',modifier: 0, value: 10},
-    { name: 'INTELIGÊNCIA',modifier: 0, value: 10},
-    { name: 'SABEDORIA',modifier: 0, value: 10 },
-    { name: 'CARISMA',modifier: 0, value: 10},
-  ];
+  // Calcula o modificador baseado no valor do atributo
+  const calculateModifier = (value) => Math.floor((value - 10) / 2);
+
+  // Atualiza o valor do atributo e recalcula o modificador
+  const handleAttributeValueChange = (index, newValue) => {
+    const value = newValue === '' ? '' : parseInt(newValue, 10);
+    const modifier = Math.floor((value - 10) / 2); // Recalcular o modificador aqui
+    updateAttributes(index, value, modifier);   console.log(`Updated Attribute at index ${index}: Value=${value}, Modifier=${modifier}`);
+  };
 
   return (
     <AttributesContainer>
-      {attributes.map((attribute) => (
+      {characterSheet.attributeAndCombat.attributes.map((attribute, index) => (
         <Attribute key={attribute.name}>
           <AttributeHeader>{attribute.name}</AttributeHeader>
-          <AttributeModifier>{attribute.modifier}</AttributeModifier>
+          <AttributeModifier>{calculateModifier(attribute.value)}</AttributeModifier>
           <AttributeValue
             type="number"
+            value={attribute.value}
+            onChange={(e) => handleAttributeValueChange(index, e.target.value)}
           />
         </Attribute>
       ))}
     </AttributesContainer>
   );
 };
-
 export default Attributes;

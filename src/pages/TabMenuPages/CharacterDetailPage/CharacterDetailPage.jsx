@@ -8,12 +8,13 @@ import AdditionalFeaturesAndTraits from '../../../components/InputsDetailCharact
 import Bonds from "../../../components/InputsDetailCharacter/Bonds.jsx";
 import Weaknesses from "../../../components/InputsDetailCharacter/Weaknesses.jsx";
 import Treasures from "../../../components/InputsDetailCharacter/Treasures.jsx";
+import Appearance from '../../../components/Appearance/Appearance.jsx';
 const CharacterDetailPage = () => {
     return (
         <PageContentMenuSheet>
             <Column $gap="19px" $width="992px" $height="1968.33px">
                 <Row $gap="34px" $width="990.83px" $height="647px">
-                    <Exemplo $width="440.83px" $height="647px">APARENCIA DE PERSONAGEM</Exemplo>
+                    <Appearance/>
                     <Column $gap="23px" $width="516px" $height="647px"> 
                         <PersonalityTraits/>
                         <Ideals/>
