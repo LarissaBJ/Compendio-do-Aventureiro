@@ -64,7 +64,15 @@ const initialCharacterSheet = {
     ],
   },
   characterDetails: {
-    appearance: null,
+    appearance: {
+      age:'', 
+      height:'', 
+      weight:'', 
+      hair:'', 
+      eyes:'', 
+      skin:'',
+      image: null  
+    },
     traits: [],
     ideals: [],
     bonds: [],
@@ -83,6 +91,35 @@ const initialCharacterSheet = {
 export const CharacterSheetProvider = ({ children }) => {
   const [characterSheet, setCharacterSheet] = useState(initialCharacterSheet);
 
+  const updateAppearance = (attribute, value) => {
+    setCharacterSheet(prev => ({
+      ...prev,
+      characterDetails: {
+        ...prev.characterDetails,
+        appearance: {
+          ...prev.characterDetails.appearance,
+          [attribute]: value
+        }
+      }
+    }));
+  };
+
+const uploadCharacterImage = (imageFile) => {
+  const reader = new FileReader();
+  reader.onload = () => {
+    setCharacterSheet(prev => ({
+      ...prev,
+      characterDetails: {
+        ...prev.characterDetails,
+        appearance: {
+          ...prev.characterDetails.appearance,
+          image: reader.result  // Salva a imagem como base64
+        }
+      }
+    }));
+  };
+  reader.readAsDataURL(imageFile);
+};
 
   const fetchClassDetails = async (className) => {
     try {
@@ -239,7 +276,9 @@ const updateAttributeAndCombat = (data) => {
       updateAttributeAndCombat,
       updateCharacterDetails,
       updateMagicAndConjuration,
-      updateHitPoints
+      updateHitPoints,
+      updateAppearance,
+      uploadCharacterImage
     }}>
       {children}
     </CharacterSheetContext.Provider>
