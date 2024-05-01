@@ -73,14 +73,15 @@ const initialCharacterSheet = {
       skin:'',
       image: null  
     },
-    traits: [],
-    ideals: [],
-    bonds: [],
-    flaws: [],
-    features: [],
-    treasure: [],
-    allies: [],
-    history: null,
+    traits: '',
+    ideals: '',
+    bonds: '',
+    flaws: '',
+    features: '',
+    treasure: '',
+    allies: '',
+    history: '',
+    additionalFeaturesAndTraits: '',
   },
   magicAndConjuration: {
     magicHeaders: [],
@@ -90,6 +91,16 @@ const initialCharacterSheet = {
 
 export const CharacterSheetProvider = ({ children }) => {
   const [characterSheet, setCharacterSheet] = useState(initialCharacterSheet);
+
+  const updateInputsCharacterDetails = (key, value) => {
+    setCharacterSheet(prev => ({
+      ...prev,
+      characterDetails: {
+        ...prev.characterDetails,
+        [key]: value
+      }
+    }));
+  };
 
   const updateAppearance = (attribute, value) => {
     setCharacterSheet(prev => ({
@@ -229,11 +240,6 @@ const uploadCharacterImage = (imageFile) => {
   });
 };
   
-
-  
-
-
-
   const updateSkills = (index, isSelected) => {
     setCharacterSheet(prev => {
       const updatedSkills = prev.attributeAndCombat.skills.map((skill, i) => {
@@ -278,7 +284,8 @@ const updateAttributeAndCombat = (data) => {
       updateMagicAndConjuration,
       updateHitPoints,
       updateAppearance,
-      uploadCharacterImage
+      uploadCharacterImage,
+      updateInputsCharacterDetails
     }}>
       {children}
     </CharacterSheetContext.Provider>

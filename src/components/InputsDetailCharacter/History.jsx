@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CharacterSheetContext } from '../../context/CharacterSheetContext';
 import EditableTextSection from './EditableTextSection';
 import InputHistoryBoxImage from '../../assets/Detalhes do Personagem/Caixas de Componentes/Caixa História.svg';
 
 const History = () => {
+    const { characterSheet, updateCharacterDetails } = useContext(CharacterSheetContext);
+    const { history } = characterSheet.characterDetails;
+
     return (
         <EditableTextSection
             title="HISTÓRIA"
@@ -17,6 +21,8 @@ const History = () => {
             displayPadding="0 30px"
             displayMargin="0"
             displayMaxHeight="87%"
+            text={history}
+            onChange={(newValue) => updateCharacterDetails({ history: newValue })}
         />
     );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BoxBackground, HeaderBox, TitleHeader, InputContent, Icone, TextDisplay } from './styled.js';
-import { IconButton } from '../GlobalStyled.js';  // Garanta que este caminho está correto
+import { BoxBackground, HeaderBox, TitleHeader, InputContent, Icone, TextDisplay } from './styled';
+import { IconButton } from '../GlobalStyled';  // Garanta que este caminho está correto
 import IconEdit from '../../assets/Atributos e Combates/Icones e Botões/Icone de Editar.svg';
 import IconConfirm from '../../assets/Atributos e Combates/Icones e Botões/Icone de Confirmar.svg';
 
@@ -17,19 +17,27 @@ const EditableTextSection = ({
     displayPadding,
     displayMargin,
     displayMaxHeight,
+    text,
+    onChange
 }) => {
     const [isEditing, setIsEditing] = useState(false);
-    const [text, setText] = useState('');
+    const [localText, setLocalText] = useState(text);
 
-    const toggleEdit = () => setIsEditing(!isEditing);
-    const handleChange = (event) => setText(event.target.value);
+    const toggleEdit = () => {
+        if (isEditing) {
+            onChange(localText);  // Atualiza o contexto ao confirmar a edição
+        }
+        setIsEditing(!isEditing);
+    };
+
+    const handleChange = (event) => setLocalText(event.target.value);
 
     return (
         <BoxBackground $bgImage={backgroundImage} width={width} height={height}>
             <HeaderBox>
                 <TitleHeader>{title}</TitleHeader>
                 <IconButton
-                    style={{ 
+                    style={{
                         width: '10px',
                         height: '10px',
                         right: "20px",
@@ -47,7 +55,7 @@ const EditableTextSection = ({
                     $height={inputHeight}
                     $padding={inputPadding}
                     $marginBottom={inputMarginBottom}
-                    value={text}
+                    value={localText}
                     onChange={handleChange}
                     autoFocus
                 />
@@ -57,7 +65,7 @@ const EditableTextSection = ({
                     $padding={displayPadding}
                     $margin={displayMargin}
                     $maxHeight={displayMaxHeight}
-                >{text || 'Digite seu texto...'}</TextDisplay>
+                >{localText || 'Digite seu texto...'}</TextDisplay>
             )}
         </BoxBackground>
     );

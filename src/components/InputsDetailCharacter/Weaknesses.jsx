@@ -1,8 +1,12 @@
-import React from 'react';
-import InputWeaknessesBoxImage from "../../assets/Detalhes do Personagem/Caixas de Componentes/Caixa  Fraquezas.svg";
-import EditableTextSection from "./EditableTextSection.jsx";
+import React, { useContext } from 'react';
+import { CharacterSheetContext } from '../../context/CharacterSheetContext';
+import EditableTextSection from './EditableTextSection';
+import InputWeaknessesBoxImage from '../../assets/Detalhes do Personagem/Caixas de Componentes/Caixa  Fraquezas.svg';
 
 const Weaknesses = () => {
+    const { characterSheet, updateCharacterDetails } = useContext(CharacterSheetContext);
+    const { flaws } = characterSheet.characterDetails;
+
     return (
         <EditableTextSection
             title="FRAQUEZAS"
@@ -17,6 +21,8 @@ const Weaknesses = () => {
             displayPadding="0 10px"
             displayMargin="0 0 10px 0"
             displayMaxHeight="70%"
+            text={flaws}
+            onChange={(newValue) => updateCharacterDetails({ flaws: newValue })}
         />
     );
 };

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CharacterSheetContext } from '../../context/CharacterSheetContext';
 import EditableTextSection from './EditableTextSection';
 import InputFeaturesBoxImage from '../../assets/Detalhes do Personagem/Caixas de Componentes/Caixa  Caracteristicas e Traços Adicionais.svg';
 
 const AdditionalFeaturesAndTraits = () => {
+    const { characterSheet, updateCharacterDetails } = useContext(CharacterSheetContext);
+    const { features } = characterSheet.characterDetails;
+
     return (
         <EditableTextSection
             title="CARACTERÍSTICAS & TRAÇOS ADICIONAIS"
@@ -17,6 +21,8 @@ const AdditionalFeaturesAndTraits = () => {
             displayPadding="0 10px"
             displayMargin="0"
             displayMaxHeight="87%"
+            text={features}
+            onChange={(newValue) => updateCharacterDetails({ features: newValue })}
         />
     );
 };
