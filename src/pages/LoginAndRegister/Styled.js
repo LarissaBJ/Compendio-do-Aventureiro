@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import BackgroundImage from '../../assets/Imagens/Plano de Fundo Login&Cadastro.jpeg'; 
 import { Link } from 'react-router-dom';
 
-export const LoginContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,20 +30,20 @@ export const LoginContainer = styled.div`
   }
 `;
 
-export const LoginBox = styled.div`
+export const Box = styled.div`
   background: rgba(251, 157, 157, 0.3);
   border-radius: 20px;
   width: 411px;
-  height: 411px;
+  height: ${props => props.$height || '411px'}; // 
   text-align: center;
 `;
 
 
-export const LoginTitle = styled.img`
+export const Title = styled.img`
 
 `;
 
-export const LoginForm = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -55,8 +55,8 @@ export const LoginForm = styled.form`
 export const Input = styled.input`
   padding: 0.5rem;
   border: 1px solid #CC9193;
-  width: 316px;
-  height: 38px; 
+  width: ${props => props.$width || '316px'};  // Usa a prop 'width' ou o padrão de '316px'
+  height: ${props => props.$height || '38px'};
   background-color: white; 
   border-radius: 4px;
   color: #4A0204; 
@@ -70,7 +70,7 @@ export const Input = styled.input`
   }
 `;
 
-export const LoginButton = styled.button`
+export const Button = styled.button`
   font-family: "Amethysta";
   background-color: #4A0204;
   color: white;

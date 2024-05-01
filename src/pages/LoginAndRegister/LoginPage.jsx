@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext'; 
 import {
-  LoginContainer,
-  LoginBox,
-  LoginTitle,
-  LoginForm,
+  Container,
+  Box,
+  Title,
+  Form,
   Input,
-  LoginButton,
+  Button,
   ForgotPasswordLink,
   SignUpPrompt,
   SignUpText
@@ -32,10 +32,10 @@ const Login = () => {
   };
 
   return (
-    <LoginContainer>
-      <LoginBox>
-        <LoginForm onSubmit={handleLogin}>
-          <LoginTitle src={logo} />
+    <Container>
+      <Box>
+        <Form onSubmit={handleLogin}>
+          <Title src={logo} />
           <Input
             type="email"
             placeholder="Email"
@@ -50,14 +50,14 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <LoginButton type="submit">LOGAR</LoginButton>
-        </LoginForm>
+          <Button type="submit">LOGAR</Button>
+        </Form>
         <SignUpPrompt>
           <SignUpText> Pronto para embarcar em uma jornada épica? </SignUpText>
           <ForgotPasswordLink to="/register">Torne-se um Aventureiro agora mesmo!</ForgotPasswordLink>
         </SignUpPrompt>
-      </LoginBox>
-    </LoginContainer>
+      </Box>
+    </Container>
   );
 };
 

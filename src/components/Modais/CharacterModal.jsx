@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Draggable from 'react-draggable';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { CharacterBoxModal, Title, InfoCharacter, InputBox, Label, Input, Select, Button, InfoOrigens,ButtonClose } from './Styled'; // Verifique os caminhos
+import { CharacterBoxModal, Title, InfoCharacter, InputBox, Label, Input, Select, Button, InfoOrigens,ButtonClose } from './Styled'; 
 import DraggableModal  from './DraggableModal.jsx'
-import { useCharacters } from '../../context/CharactersContext'; // Adapte o caminho conforme necessário
+import { useCharacters } from '../../context/CharactersContext';
 
 const CharacterModal = ({ onClose }) => {
     const { addCharacter } = useCharacters();

@@ -5,7 +5,6 @@ import IconePersonagemFeminino from '../../assets/Personagens/IconePersonagemFem
 import IconeCaveira from '../../assets/Personagens/Icone Caveira.svg';
 
 const Character = ({ name, clazz, race, gender, onDelete, id, showDeleteIcon }) => {
-    // Agora verificamos se o gênero é 'female' para determinar se o ícone feminino deve ser usado
     const isFemale = gender.toLowerCase() === 'female';
     const personagemIcone = isFemale ? IconePersonagemFeminino : IconePersonagemMasculino;
 

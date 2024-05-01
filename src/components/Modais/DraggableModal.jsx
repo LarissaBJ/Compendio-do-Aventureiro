@@ -40,8 +40,8 @@ const DraggableModal = ({ children, onDragStart, onDragEnd, style }) => {
                 position: 'fixed',
                 top: position.y,
                 left: position.x,
-                zIndex: 1000, // Ensure the modal is above other elements
-                backgroundColor: 'transparent', // Semi-transparent white background
+                zIndex: 1000, 
+                backgroundColor: 'transparent', 
                 ...style
             }}
             onMouseDown={startDrag}

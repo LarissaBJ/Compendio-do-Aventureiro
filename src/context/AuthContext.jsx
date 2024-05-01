@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
 
@@ -9,39 +9,49 @@ const getUserFromLocalStorage = () => {
   return userData ? JSON.parse(userData) : null;
 };
 
-const generateRandomUserId = () => {
-  return Math.floor(Math.random() * 90000) + 10000; 
-};
-
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(getUserFromLocalStorage());
-  
-    const login = async (credentials, navigate) => {
-      const mockUserId = generateRandomUserId(); 
-      const userData = { userId: mockUserId, ...credentials }; 
-      localStorage.setItem('user', JSON.stringify(userData));
-      setUser(userData);
-      navigate(`/home/${mockUserId}`); 
-    };
+  const [user, setUser] = useState(getUserFromLocalStorage());
+
+
+
+  const register = async (credentials, navigate) => {
+    const { email } = credentials;
+    const existingUser = getUserFromLocalStorage();
+    if (existingUser && existingUser.email === email) {
+      alert('Usuário já cadastrado com este e-mail.');
+    } else {
+      const newUser = {
+        userId: Date.now(), 
+        ...credentials
+      };
+      localStorage.setItem('user', JSON.stringify(newUser));
+      console.log("Após login:", localStorage.getItem('user'));
+      setUser(newUser);
+      navigate(`/home/${newUser.userId}`);
+    }
+  };
+
+  const login = async (credentials, navigate) => {
+    const { email, password } = credentials;
+    const storedUser = getUserFromLocalStorage();
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+      setUser(storedUser);
+      navigate(`/home/${storedUser.userId}`);
+      console.log("Após login:", localStorage.getItem('user'));
+    } else {
+      alert('Credenciais incorretas ou usuário não cadastrado');
+      console.log("Após login:", localStorage.getItem('user'));
+    }
+  };
 
   const logout = () => {
-    localStorage.removeItem('user');
     setUser(null);
   };
 
-  const isAuth = () => {
-    return user != null;
-  };
-
-  useEffect(() => {
-    const storedUser = getUserFromLocalStorage();
-    if (storedUser) {
-      setUser(storedUser);
-    }
-  }, []);
+  const isAuth = () => !!user;
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuth }}>
+    <AuthContext.Provider value={{ user, register, login, logout, isAuth }}>
       {children}
     </AuthContext.Provider>
   );
