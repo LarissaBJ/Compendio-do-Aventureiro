@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CharacterSheetContext } from '../../context/CharacterSheetContext.jsx';
 import {
     ResistanceBox,
     ResistanceTestWrapper,
@@ -8,29 +9,37 @@ import {
     ResistanceText, ResistanceValue, ValueBox
 } from "./styled.js";
 import ResistanceValueImage from "../../assets/Atributos e Combates/Inputs e Selects/Input de Pericia.svg"
+
 const ResistanceTest = () => {
-    const resistances = [
-        {name: "Força"},
-        {name: "Destreza"},
-        {name: "Constituição"},
-        {name: "Inteligência"},
-        {name: "Sabedoria"},
-        {name: "Carisma"}];
+    const { characterSheet, updateResistanceTests } = useContext(CharacterSheetContext);
+
+    
+    const handleCheckboxChange = (index) => {
+       
+        const isSelected = !characterSheet.attributeAndCombat.resistanceTests[index].isSelected;
+      
+        updateResistanceTests(index, isSelected);
+    };
+
 
     return (
         <ResistanceTestWrapper>
             <ResistanceTitle>TESTE DE RESISTÊNCIA</ResistanceTitle>
 
             <ResistanceWrapper>
-                {resistances.map(resistance => (
-                    <ResistanceBox key={resistance.name}>
-                        <ResistanceCheckBox/>
+                {characterSheet.attributeAndCombat.resistanceTests.map((test, index) => (
+                    <ResistanceBox key={test.name}>
+                        <ResistanceCheckBox
+                            type="checkbox"
+                            checked={test.isSelected}
+                            onChange={() => handleCheckboxChange(index)}
+                        />
                         <ValueBox>
-                            <ResistanceValue>{0}</ResistanceValue>
+                            <ResistanceValue>{test.totalMod}</ResistanceValue>
                             <img className="img-resistencias" src={ResistanceValueImage} alt="input de Teste de resistencias" style={{ alignSelf: 'center' }} />
                         </ValueBox>
 
-                        <ResistanceText>{resistance.name}</ResistanceText>
+                        <ResistanceText>{test.name}</ResistanceText>
                     </ResistanceBox>
                 ))}
             </ResistanceWrapper>

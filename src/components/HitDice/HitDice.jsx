@@ -14,13 +14,13 @@ const HitDice = () => {
                 <HitDiceTotalWrapper>
                     <HitDiceText>Total:</HitDiceText>
                     <HitDiceInputTotal
-                        placeholder={0}
+                        defaultValue={0}
                         min={0}
                         type="number"/>
                 </HitDiceTotalWrapper>
 
                 <HitDiceInput
-                    placeholder={0}
+                    defaultValue={0}
                     min={0}
                     type="number"
                 />

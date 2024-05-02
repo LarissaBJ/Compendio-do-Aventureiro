@@ -26,7 +26,7 @@ const Equipment = () => {
     const { equipments, addEquipment, updateEquipment, deleteEquipment } = useCRUD();
   
     const handleAddItem = () => {
-      const newItem = { type: '', name: '', weight: '' };
+      const newItem = { quant: '', name: '', weight: '' };
       addEquipment(newItem);
     };
   
@@ -60,8 +60,8 @@ const Equipment = () => {
                   $image={InputNumerImage}
                   width="48px"
                   type="number"
-                  value={equipment.weight}
-                  onChange={(e) => handleUpdateItem(equipment.id, 'type', e.target.value)}
+                  value={equipment.quant}
+                  onChange={(e) => handleUpdateItem(equipment.id, 'quant', e.target.value)}
                 />
                 <ItemInput
                   $image={InputNameItemImage}

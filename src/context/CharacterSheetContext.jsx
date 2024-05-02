@@ -25,7 +25,14 @@ const initialCharacterSheet = {
       ca: 10,
       deslocamento: 9
     },
-    resistanceTests: [],
+    resistanceTests: [
+      { name: 'Força', attribute: 'FORÇA', isSelected: false, totalMod: 0 },
+      { name: 'Destreza', attribute: 'DESTREZA', isSelected: false, totalMod: 0 },
+      { name: 'Constituição', attribute: 'CONSTITUIÇÃO', isSelected: false, totalMod: 0 },
+      { name: 'Inteligência', attribute: 'INTELIGÊNCIA', isSelected: false, totalMod: 0 },
+      { name: 'Sabedoria', attribute: 'SABEDORIA', isSelected: false, totalMod: 0 },
+      { name: 'Carisma', attribute: 'CARISMA', isSelected: false, totalMod: 0 },
+    ],
     savingThrows: [],
     hitPoints: 0,
     proficiencyBonus: 2,
@@ -73,7 +80,7 @@ const initialCharacterSheet = {
       skin:'',
       image: null  
     },
-    traits: '',
+    traits: [],
     ideals: '',
     bonds: '',
     flaws: '',
@@ -252,7 +259,7 @@ setCharacterSheet(prev => {
       attributes: newAttributes,
       skills: updatedSkills,
       defense: updatedDefense,
-      hitPoints: newHitPoints 
+      hitPoints: newHitPoints  
     }
   };
 });
@@ -284,7 +291,8 @@ const updateSkills = (index, isSelected) => {
       characterSheet,
       setCharacterSheet,
       createCharacterSheet,
-      updateAttributes,
+     
+
       updateInputsCharacterDetails,
       updateAppearance,
       uploadCharacterImage,
