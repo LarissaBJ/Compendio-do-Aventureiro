@@ -28,7 +28,7 @@ const Router = createBrowserRouter([
           { path: 'about', element: <AboutPage /> },
           { path: 'characters', element: <CharacterPage /> },
           {
-            path: 'charactersheet',
+            path: 'charactersheet/:characterId',
             element: <CharacterSheetPage />,
             children: [
               { path: 'attributecombat', element: <AttributeCombatPage /> },

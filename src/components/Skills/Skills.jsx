@@ -19,14 +19,12 @@ import InputPericiaImagem from '../../assets/Atributos e Combates/Inputs e Selec
 const Skills = () => {
   const { characterSheet, updateSkills } = useContext(CharacterSheetContext);
 
-  // Função para lidar com as mudanças no checkbox das perícias
-  const handleCheckboxChange = (index) => {
-    // A obtenção do estado atual da seleção e a inversão dele
+  const handleCheckboxChange = (index) => () => {
     const isSelected = !characterSheet.attributeAndCombat.skills[index].isSelected;
-    // Chamada para a função updateSkills do contexto com o novo estado da seleção
     updateSkills(index, isSelected);
   };
-  
+
+
   return (
     <SkillsWrapper>
       <SkillTitle>PERÍCIAS</SkillTitle>
@@ -40,7 +38,7 @@ const Skills = () => {
           <CheckBox
             type="checkbox"
             checked={skill.isSelected}
-            onChange={() => handleCheckboxChange(index)}
+            onChange={handleCheckboxChange(index)} // Alterado para evitar função anônima
           />
           <ModBox>
             <ModTitle>{skill.totalMod}</ModTitle>

@@ -12,7 +12,7 @@ const initialCharacterSheet = {
     alignment: '',
     background: '',
     level: 1,
-    name: 'KIRA FIORE',
+    name: '',
   },
   attributeAndCombat: {
     life: {
@@ -90,7 +90,7 @@ const initialCharacterSheet = {
 };
 
 export const CharacterSheetProvider = ({ children }) => {
-  const [characterSheet, setCharacterSheet] = useState({}); 
+  const [characterSheet, setCharacterSheet] = useState(initialCharacterSheet);
 
   const createCharacterSheet = (characterData) => {
     const newId = Math.random().toString(36).substr(2, 9);
@@ -106,208 +106,199 @@ export const CharacterSheetProvider = ({ children }) => {
         level: 1
       }
     };
-    setCharacterSheet(prevSheets => ({ ...prevSheets, [newId]: newSheet })); // Correção na função
+    // Atualiza o estado de maneira correta
+    setCharacterSheet(prev => ({...prev, [newId]: newSheet}));
     return newId;
   };
 
-  const updateInputsCharacterDetails = (key, value) => {
-    setCharacterSheet(prev => ({
-      ...prev,
-      characterDetails: {
-        ...prev.characterDetails,
-        [key]: value
-      }
-    }));
-  };
+//---------------------------------------------------------------------------------------------------------------------------
 
-  const updateAppearance = (attribute, value) => {
-    setCharacterSheet(prev => ({
-      ...prev,
-      characterDetails: {
-        ...prev.characterDetails,
-        appearance: {
-          ...prev.characterDetails.appearance,
-          [attribute]: value
-        }
-      }
-    }));
-  };
-
-const uploadCharacterImage = (imageFile) => {
-  const reader = new FileReader();
-  reader.onload = () => {
-    setCharacterSheet(prev => ({
-      ...prev,
-      characterDetails: {
-        ...prev.characterDetails,
-        appearance: {
-          ...prev.characterDetails.appearance,
-          image: reader.result  // Salva a imagem como base64
-        }
-      }
-    }));
-  };
-  reader.readAsDataURL(imageFile);
+const updateInputsCharacterDetails = (key, value) => {
+  setCharacterSheet(prev => ({
+    ...prev,
+    characterDetails: {
+      ...prev.characterDetails,
+      [key]: value
+    }
+  }));
 };
 
-  const fetchClassDetails = async (className) => {
-    try {
-      const response = await axios.get(`https://www.dnd5eapi.co/api/classes/${className}`);
-      const newHitDie = response.data.hit_die;
-      setCharacterSheet(prev => {
-        const constitutionModifier = getAttributeModifier(prev.attributeAndCombat.attributes, 'CONSTITUIÇÃO');
-        const newHitPoints = newHitDie + constitutionModifier;
-        console.log(`Fetched class details: Hit Die = ${newHitDie}, updating hit points to ${newHitPoints}`);
-        return {
-          ...prev,
-          attributeAndCombat: {
-            ...prev.attributeAndCombat,
-            hitDie: newHitDie,
-            hitPoints: newHitPoints
-          }
-        };
-      });
-    } catch (error) {
-      console.error('Error fetching class details:', error);
+const updateAppearance = (attribute, value) => {
+  setCharacterSheet(prev => ({
+    ...prev,
+    characterDetails: {
+      ...prev.characterDetails,
+      appearance: {
+        ...prev.characterDetails.appearance,
+        [attribute]: value
+      }
+    }
+  }));
+};
+
+const uploadCharacterImage = (imageFile) => {
+const reader = new FileReader();
+reader.onload = () => {
+  setCharacterSheet(prev => ({
+    ...prev,
+    characterDetails: {
+      ...prev.characterDetails,
+      appearance: {
+        ...prev.characterDetails.appearance,
+        image: reader.result  // Salva a imagem como base64
+      }
+    }
+  }));
+};
+reader.readAsDataURL(imageFile);
+};
+
+const fetchClassDetails = async (className) => {
+  try {
+    const response = await axios.get(`https://www.dnd5eapi.co/api/classes/${className}`);
+    const newHitDie = response.data.hit_die;
+    setCharacterSheet(prev => {
+      const constitutionModifier = getAttributeModifier(prev.attributeAndCombat.attributes, 'CONSTITUIÇÃO');
+      const newHitPoints = newHitDie + constitutionModifier;
+      console.log(`Fetched class details: Hit Die = ${newHitDie}, updating hit points to ${newHitPoints}`);
+      return {
+        ...prev,
+        attributeAndCombat: {
+          ...prev.attributeAndCombat,
+          hitDie: newHitDie,
+          hitPoints: newHitPoints
+        }
+      };
+    });
+  } catch (error) {
+    console.error('Error fetching class details:', error);
+  }
+};
+
+const updateHeaderDetails = (field, value) => {
+  console.log(`Updating header details: ${field} = ${value}`);
+  setCharacterSheet(prev => ({
+    ...prev,
+    headerDetails: {
+      ...prev.headerDetails,
+      [field]: value
+    }
+  }));
+  if (field === 'class') {
+    fetchClassDetails(value);
+  }
+};
+
+const updateHitPoints = (newHitDie) => {
+  const constitutionModifier = getAttributeModifier(characterSheet.attributeAndCombat.attributes, 'CONSTITUIÇÃO');
+  const totalHitPoints = newHitDie + constitutionModifier;
+  console.log(`Updating hit points: New Hit Die = ${newHitDie}, Constitution Modifier = ${constitutionModifier}, Total Hit Points = ${totalHitPoints}`);
+  setCharacterSheet(prev => ({
+    ...prev,
+    attributeAndCombat: {
+      ...prev.attributeAndCombat,
+      hitPoints: totalHitPoints
+    }
+  }));
+};
+
+
+const getAttributeModifier = (attributes, attributeName) => {
+  const attribute = attributes.find(attr => attr.name === attributeName);
+  return attribute ? Math.floor((attribute.value - 10) / 2) : 0;
+};
+
+
+const updateAttributes = (index, value) => {
+setCharacterSheet(prev => {
+  const newAttributes = prev.attributeAndCombat.attributes.map((attribute, i) => {
+    if (i === index) {
+      const newValue = parseInt(value, 10) || 0;
+      const newModifier = Math.floor((newValue - 10) / 2);
+      console.log(`Updated ${attribute.name}: Value = ${newValue}, Modifier = ${newModifier}`);
+      return { ...attribute, value: newValue, modifier: newModifier };
+    }
+    return attribute;
+  });
+
+  const updatedSkills = prev.attributeAndCombat.skills.map(skill => {
+    const relatedAttribute = newAttributes.find(attr => attr.name === skill.attribute);
+    const totalMod = skill.isSelected ? relatedAttribute.modifier + prev.attributeAndCombat.proficiencyBonus : relatedAttribute.modifier;
+    return { ...skill, totalMod };
+  });
+
+  const dexterityModifier = getAttributeModifier(newAttributes, 'DESTREZA');
+  const constitutionModifier = getAttributeModifier(newAttributes, 'CONSTITUIÇÃO');
+
+  const updatedDefense = {
+    ...prev.attributeAndCombat.defense,
+    iniciativa: dexterityModifier,
+    ca: 10 + dexterityModifier
+  };
+
+  const newHitPoints = prev.attributeAndCombat.hitDie + constitutionModifier;
+
+  // Verificar se a Constituição foi alterada e atualizar os pontos de vida
+  const constitutionChanged = index === newAttributes.findIndex(attr => attr.name === 'CONSTITUIÇÃO');
+
+  if (constitutionChanged) {
+    console.log(`Updating hit points due to Constitution change: New max = ${newHitPoints}`);
+  }
+
+  console.log(`Current Hit Die: ${prev.attributeAndCombat.hitDie}`);
+
+  return {
+    ...prev,
+    attributeAndCombat: {
+      ...prev.attributeAndCombat,
+      attributes: newAttributes,
+      skills: updatedSkills,
+      defense: updatedDefense,
+      hitPoints: newHitPoints  // Atualizando os pontos de vida independentemente
     }
   };
+});
+};
 
-
-
-  const updateHeaderDetails = (field, value) => {
-    console.log(`Updating header details: ${field} = ${value}`);
-    setCharacterSheet(prev => ({
-      ...prev,
-      headerDetails: {
-        ...prev.headerDetails,
-        [field]: value
-      }
-    }));
-    if (field === 'class') {
-      fetchClassDetails(value);
-    }
-  };
-
-  const updateHitPoints = (newHitDie) => {
-    const constitutionModifier = getAttributeModifier(characterSheet.attributeAndCombat.attributes, 'CONSTITUIÇÃO');
-    const totalHitPoints = newHitDie + constitutionModifier;
-    console.log(`Updating hit points: New Hit Die = ${newHitDie}, Constitution Modifier = ${constitutionModifier}, Total Hit Points = ${totalHitPoints}`);
-    setCharacterSheet(prev => ({
-      ...prev,
-      attributeAndCombat: {
-        ...prev.attributeAndCombat,
-        hitPoints: totalHitPoints
-      }
-    }));
-  };
-
-  const getAttributeModifier = (attributes, attributeName) => {
-    const attribute = attributes.find(attr => attr.name === attributeName);
-    return attribute ? Math.floor((attribute.value - 10) / 2) : 0;
-  };
-
-
- const updateAttributes = (index, value) => {
+const updateSkills = (index, isSelected) => {
   setCharacterSheet(prev => {
-    const newAttributes = prev.attributeAndCombat.attributes.map((attribute, i) => {
+    const updatedSkills = prev.attributeAndCombat.skills.map((skill, i) => {
       if (i === index) {
-        const newValue = parseInt(value, 10) || 0;
-        const newModifier = Math.floor((newValue - 10) / 2);
-        console.log(`Updated ${attribute.name}: Value = ${newValue}, Modifier = ${newModifier}`);
-        return { ...attribute, value: newValue, modifier: newModifier };
+        const attributeMod = getAttributeModifier(prev.attributeAndCombat.attributes, skill.attribute);
+        const totalMod = isSelected ? attributeMod + prev.attributeAndCombat.proficiencyBonus : attributeMod;
+        return { ...skill, isSelected, totalMod };
       }
-      return attribute;
+      return skill;
     });
-
-    const updatedSkills = prev.attributeAndCombat.skills.map(skill => {
-      const relatedAttribute = newAttributes.find(attr => attr.name === skill.attribute);
-      const totalMod = skill.isSelected ? relatedAttribute.modifier + prev.attributeAndCombat.proficiencyBonus : relatedAttribute.modifier;
-      return { ...skill, totalMod };
-    });
-
-    const dexterityModifier = getAttributeModifier(newAttributes, 'DESTREZA');
-    const constitutionModifier = getAttributeModifier(newAttributes, 'CONSTITUIÇÃO');
-
-    const updatedDefense = {
-      ...prev.attributeAndCombat.defense,
-      iniciativa: dexterityModifier,
-      ca: 10 + dexterityModifier
-    };
-
-    const newHitPoints = prev.attributeAndCombat.hitDie + constitutionModifier;
-
-    // Verificar se a Constituição foi alterada e atualizar os pontos de vida
-    const constitutionChanged = index === newAttributes.findIndex(attr => attr.name === 'CONSTITUIÇÃO');
-
-    if (constitutionChanged) {
-      console.log(`Updating hit points due to Constitution change: New max = ${newHitPoints}`);
-    }
-
-    console.log(`Current Hit Die: ${prev.attributeAndCombat.hitDie}`);
 
     return {
       ...prev,
       attributeAndCombat: {
         ...prev.attributeAndCombat,
-        attributes: newAttributes,
-        skills: updatedSkills,
-        defense: updatedDefense,
-        hitPoints: newHitPoints  // Atualizando os pontos de vida independentemente
+        skills: updatedSkills
       }
     };
   });
 };
-  
-  const updateSkills = (index, isSelected) => {
-    setCharacterSheet(prev => {
-      const updatedSkills = prev.attributeAndCombat.skills.map((skill, i) => {
-        if (i === index) {
-          const attributeMod = getAttributeModifier(prev.attributeAndCombat.attributes, skill.attribute);
-          const totalMod = isSelected ? attributeMod + prev.attributeAndCombat.proficiencyBonus : attributeMod;
-          return { ...skill, isSelected, totalMod };
-        }
-        return skill;
-      });
-  
-      return {
-        ...prev,
-        attributeAndCombat: {
-          ...prev.attributeAndCombat,
-          skills: updatedSkills
-        }
-      };
-    });
-  };
-
-const updateAttributeAndCombat = (data) => {
-  setCharacterSheet(prev => ({ ...prev, attributeAndCombat: { ...prev.attributeAndCombat, ...data }}));
-};
-
-  const updateCharacterDetails = (data) => {
-    setCharacterSheet(prev => ({ ...prev, characterDetails: { ...prev.characterDetails, ...data }}));
-  };
-
-  const updateMagicAndConjuration = (data) => {
-    setCharacterSheet(prev => ({ ...prev, magicAndConjuration: { ...prev.magicAndConjuration, ...data }}));
-  };
 
   return (
     <CharacterSheetContext.Provider value={{
       characterSheet,
-      getCharacterSheet: (id) => sheets[id],
+      setCharacterSheet,
       createCharacterSheet,
       updateAttributes,
-      updateSkills,
-      updateHeaderDetails,
-      updateAttributeAndCombat,
-      updateCharacterDetails,
-      updateMagicAndConjuration,
-      updateHitPoints,
+
+      updateInputsCharacterDetails,
       updateAppearance,
       uploadCharacterImage,
-      updateInputsCharacterDetails
+      fetchClassDetails,
+      updateHeaderDetails,
+      updateHitPoints,
+      updateAttributes,
+      updateSkills
     }}>
       {children}
     </CharacterSheetContext.Provider>
   );
 };
+

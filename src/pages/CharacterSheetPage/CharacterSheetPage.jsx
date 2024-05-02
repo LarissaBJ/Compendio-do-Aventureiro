@@ -1,18 +1,18 @@
-import React  from 'react';
-import {useParams, Outlet } from 'react-router-dom';
+
+import { useParams, Outlet } from 'react-router-dom';
 import MenuNavBar from '../../components/NavigateBars/MenuNavBar/MenuNavBar';
-import { PageContenierSheet, ContentSheet } from '../../App.js'; 
 import HeaderSheet from '../../components/HeaderSheet/HeaderSheet';
+import { PageContenierSheet, ContentSheet } from '../../App.js';
 
 const CharacterSheetPage = () => {
-    const { userId } = useParams(); 
+    const { characterId, userId } = useParams();
 
     return (
         <PageContenierSheet>
             <HeaderSheet />
-            <MenuNavBar userId={userId} /> 
+            <MenuNavBar userId={userId} characterId={characterId} />
             <ContentSheet>
-                <Outlet /> 
+                <Outlet />
             </ContentSheet>
         </PageContenierSheet>
     );
