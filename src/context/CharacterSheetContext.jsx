@@ -25,7 +25,14 @@ const initialCharacterSheet = {
       ca: 10,
       deslocamento: 9
     },
-    resistanceTests: [],
+    resistanceTests: [
+      { name: 'Força', attribute: 'FORÇA', isSelected: false, totalMod: 0 },
+      { name: 'Destreza', attribute: 'DESTREZA', isSelected: false, totalMod: 0 },
+      { name: 'Constituição', attribute: 'CONSTITUIÇÃO', isSelected: false, totalMod: 0 },
+      { name: 'Inteligência', attribute: 'INTELIGÊNCIA', isSelected: false, totalMod: 0 },
+      { name: 'Sabedoria', attribute: 'SABEDORIA', isSelected: false, totalMod: 0 },
+      { name: 'Carisma', attribute: 'CARISMA', isSelected: false, totalMod: 0 },
+    ],
     savingThrows: [],
     hitPoints: 0,
     proficiencyBonus: 2,
@@ -73,7 +80,7 @@ const initialCharacterSheet = {
       skin:'',
       image: null  
     },
-    traits: '',
+    traits: [],
     ideals: '',
     bonds: '',
     flaws: '',
@@ -260,6 +267,27 @@ setCharacterSheet(prev => {
 });
 };
 
+  const updateResistanceTests = (index, isSelected) => {
+    setCharacterSheet(prev => {
+      const updatedResistanceTests = prev.attributeAndCombat.resistanceTests.map((test, i) => {
+        if (i === index) {
+          const attributeMod = getAttributeModifier(prev.attributeAndCombat.attributes, test.attribute);
+          const totalMod = isSelected ? attributeMod + prev.attributeAndCombat.proficiencyBonus : 0;
+          return { ...test, isSelected, totalMod };
+        }
+        return test;
+      });
+
+      return {
+        ...prev,
+        attributeAndCombat: {
+          ...prev.attributeAndCombat,
+          resistanceTests: updatedResistanceTests
+        }
+      };
+    });
+  };
+
 const updateSkills = (index, isSelected) => {
   setCharacterSheet(prev => {
     const updatedSkills = prev.attributeAndCombat.skills.map((skill, i) => {
@@ -286,8 +314,7 @@ const updateSkills = (index, isSelected) => {
       characterSheet,
       setCharacterSheet,
       createCharacterSheet,
-      updateAttributes,
-
+      updateResistanceTests,
       updateInputsCharacterDetails,
       updateAppearance,
       uploadCharacterImage,
