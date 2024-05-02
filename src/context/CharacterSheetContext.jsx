@@ -106,7 +106,6 @@ export const CharacterSheetProvider = ({ children }) => {
         level: 1
       }
     };
-    // Atualiza o estado de maneira correta
     setCharacterSheet(prev => ({...prev, [newId]: newSheet}));
     return newId;
   };
@@ -145,7 +144,7 @@ reader.onload = () => {
       ...prev.characterDetails,
       appearance: {
         ...prev.characterDetails.appearance,
-        image: reader.result  // Salva a imagem como base64
+        image: reader.result  
       }
     }
   }));
@@ -238,7 +237,6 @@ setCharacterSheet(prev => {
 
   const newHitPoints = prev.attributeAndCombat.hitDie + constitutionModifier;
 
-  // Verificar se a Constituição foi alterada e atualizar os pontos de vida
   const constitutionChanged = index === newAttributes.findIndex(attr => attr.name === 'CONSTITUIÇÃO');
 
   if (constitutionChanged) {
@@ -254,7 +252,7 @@ setCharacterSheet(prev => {
       attributes: newAttributes,
       skills: updatedSkills,
       defense: updatedDefense,
-      hitPoints: newHitPoints  // Atualizando os pontos de vida independentemente
+      hitPoints: newHitPoints 
     }
   };
 });
@@ -287,7 +285,6 @@ const updateSkills = (index, isSelected) => {
       setCharacterSheet,
       createCharacterSheet,
       updateAttributes,
-
       updateInputsCharacterDetails,
       updateAppearance,
       uploadCharacterImage,

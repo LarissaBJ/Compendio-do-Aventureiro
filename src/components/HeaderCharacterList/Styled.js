@@ -73,13 +73,13 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   &:hover {
-    background: rgba(209, 0, 0, 0.1); // Efeito de hover leve
+    background: rgba(209, 0, 0, 0.1); 
   }
 `;
 
 export const Image = styled.img`
   width: 32px;
-  height: 32px; // Mantenha as imagens dos ícones consistentes
+  height: 32px; 
   margin: 0;
   padding: 0;
 `;

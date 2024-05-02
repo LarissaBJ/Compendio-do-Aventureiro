@@ -68,7 +68,6 @@ const MagicSkills = () => {
                                 <MagicTitleMinorText>{dados.school.name} ({dados.ritual ? 'Ritual' : 'Magia'})</MagicTitleMinorText>
                             </div>
                             <div className="checkboxes">
-                                {/* Adicione checkboxes e ícones aqui */}
                             </div>
                         </TitleWrapper>
                         {isExpanded && (

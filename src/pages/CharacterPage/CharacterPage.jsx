@@ -4,7 +4,7 @@ import { PageContenier, ViewCharacterList } from '../../App';
 import Character from '../../components/Character/Character';
 import HeaderCharacterList from '../../components/HeaderCharacterList/HeaderCharacterList';
 import { useCharacters } from '../../context/CharactersContext';
-import CharacterModal from '../../components/Modais/CharacterModal'; // Certifique-se de que o caminho está correto
+import CharacterModal from '../../components/Modais/CharacterModal'; 
 
 const CharacterPage = () => {
     const { characters, removeCharacter } = useCharacters();

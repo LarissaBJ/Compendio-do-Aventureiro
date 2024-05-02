@@ -89,8 +89,8 @@ export const ViewCharacterList = styled.div`
   height: 920px;
   justify-content: top;
   display: flex;
-  flex-direction: column; /* Change this from row to column */
-  align-items: center; /* This will center your items horizontally */
-  overflow-y: auto; /* Adds scroll if content overflows */
+  flex-direction: column; 
+  align-items: center; 
+  overflow-y: auto; 
 `;
 

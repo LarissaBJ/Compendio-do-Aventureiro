@@ -55,7 +55,7 @@ export const Form = styled.form`
 export const Input = styled.input`
   padding: 0.5rem;
   border: 1px solid #CC9193;
-  width: ${props => props.$width || '316px'};  // Usa a prop 'width' ou o padrão de '316px'
+  width: ${props => props.$width || '316px'}; 
   height: ${props => props.$height || '38px'};
   background-color: white; 
   border-radius: 4px;

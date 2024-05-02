@@ -38,7 +38,7 @@ const Skills = () => {
           <CheckBox
             type="checkbox"
             checked={skill.isSelected}
-            onChange={handleCheckboxChange(index)} // Alterado para evitar função anônima
+            onChange={handleCheckboxChange(index)} 
           />
           <ModBox>
             <ModTitle>{skill.totalMod}</ModTitle>

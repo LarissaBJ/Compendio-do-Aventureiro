@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';  // Adiciona useParams aqui
+import { useNavigate, useParams } from 'react-router-dom';  
 import { CharacterBox, IconePersonagem, InfoBox, NameCharacter, Origens, Title, ValueText, IconeMorte } from './Styled';
 import IconePersonagemMasculino from '../../assets/Personagens/IconePersonagemMasculino.svg';
 import IconePersonagemFeminino from '../../assets/Personagens/IconePersonagemFeminino.svg';
@@ -7,12 +7,12 @@ import IconeCaveira from '../../assets/Personagens/Icone Caveira.svg';
 
 const Character = ({ name, clazz, race, gender, onDelete, id, showDeleteIcon }) => {
     const navigate = useNavigate();
-    const { userId } = useParams();  // Adiciona isso para pegar o userId
+    const { userId } = useParams();  
     const isFemale = gender.toLowerCase() === 'female';
     const personagemIcone = isFemale ? IconePersonagemFeminino : IconePersonagemMasculino;
 
     const handleClick = () => {
-        // Usa o userId obtido de useParams
+        
         navigate(`/home/${userId}/charactersheet/${id}/attributecombat`);
     };
 

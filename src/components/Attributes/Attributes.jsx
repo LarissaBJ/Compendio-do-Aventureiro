@@ -5,13 +5,12 @@ import { AttributesContainer, Attribute, AttributeModifier, AttributeHeader, Att
 const Attributes = () => {
   const { characterSheet, updateAttributes } = useContext(CharacterSheetContext);
 
-  // Calcula o modificador baseado no valor do atributo
   const calculateModifier = (value) => Math.floor((value - 10) / 2);
 
-  // Atualiza o valor do atributo e recalcula o modificador
+  
   const handleAttributeValueChange = (index, newValue) => {
     const value = newValue === '' ? '' : parseInt(newValue, 10);
-    const modifier = Math.floor((value - 10) / 2); // Recalcular o modificador aqui
+    const modifier = Math.floor((value - 10) / 2);
     updateAttributes(index, value, modifier);   console.log(`Updated Attribute at index ${index}: Value=${value}, Modifier=${modifier}`);
   };
 

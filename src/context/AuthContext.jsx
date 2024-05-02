@@ -1,23 +1,18 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Criando o contexto de autenticação
 const AuthContext = createContext();
 
-// Hook customizado para usar o contexto de autenticação
 export const useAuth = () => useContext(AuthContext);
 
-// Função para obter os usuários do localStorage
 const getUsersFromLocalStorage = () => {
   const usersData = localStorage.getItem('users');
   return usersData ? JSON.parse(usersData) : [];
 };
 
-// Função para salvar os usuários no localStorage
 const saveUsersToLocalStorage = (users) => {
   localStorage.setItem('users', JSON.stringify(users));
 };
 
-// Componente Provider que envolve sua aplicação e fornece o estado de autenticação
 const AuthProvider = ({ children }) => {
   const [users, setUsers] = useState(getUsersFromLocalStorage());
   const [user, setUser] = useState(null);

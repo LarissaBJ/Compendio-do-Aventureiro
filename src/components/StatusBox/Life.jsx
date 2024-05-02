@@ -12,10 +12,9 @@ const Life = () => {
     const handleTempHitPointsChange = (e) => {
         const newTempHitPoints = parseInt(e.target.value, 10) || 0;
         setTempHitPoints(newTempHitPoints);
-        updateTemporaryHitPoints(newTempHitPoints);  // Assuming you have such a function to update context
+        updateTemporaryHitPoints(newTempHitPoints); 
     };
 
-    // Ensure numerical values for display
     const maximaDisplay = isNaN(hitPoints) ? 'Erro' : hitPoints;
     const atualDisplay = maximaDisplay + tempHitPoints;
 

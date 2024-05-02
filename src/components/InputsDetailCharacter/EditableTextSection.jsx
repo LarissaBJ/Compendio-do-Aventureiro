@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BoxBackground, HeaderBox, TitleHeader, InputContent, Icone, TextDisplay } from './styled';
-import { IconButton } from '../GlobalStyled';  // Garanta que este caminho está correto
+import { IconButton } from '../GlobalStyled'; 
 import IconEdit from '../../assets/Atributos e Combates/Icones e Botões/Icone de Editar.svg';
 import IconConfirm from '../../assets/Atributos e Combates/Icones e Botões/Icone de Confirmar.svg';
 
@@ -25,7 +25,7 @@ const EditableTextSection = ({
 
     const toggleEdit = () => {
         if (isEditing) {
-            onChange(localText);  // Atualiza o contexto ao confirmar a edição
+            onChange(localText); 
         }
         setIsEditing(!isEditing);
     };

@@ -41,8 +41,18 @@ export const CharactersProvider = ({ children }) => {
         setCharacters(prev => prev.filter(char => char.id !== characterId));
     };
 
+    const getCharacterById = (characterId) => {
+      const character = characters.find(char => char.id === characterId);
+      if (character) {
+        return character;
+      } else {
+        console.error('Personagem não encontrado');
+        return null;  
+      }
+    };
+
     return (
-        <CharactersContext.Provider value={{ characters, addCharacter, removeCharacter }}>
+        <CharactersContext.Provider value={{ characters, addCharacter, removeCharacter,getCharacterById }}>
             {children}
         </CharactersContext.Provider>
     );

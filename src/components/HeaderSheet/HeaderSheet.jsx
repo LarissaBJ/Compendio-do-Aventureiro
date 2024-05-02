@@ -1,29 +1,16 @@
-import React,{useState , useContext, useEffect} from 'react';
-import { 
-  HeaderSheetContent, 
-  HeaderSheetBox, 
-  LevelBox, 
-  NameBox, 
-  IMG, 
-  CharacterOrigins, 
-  CharacterOriginsBox,
-  SelectTitle,
-  LevelTitle,
-  Level,
-  HeaderLevel,
-  NameTitle
-} from './Styled'; 
-import { GlobalSelect , OptionGlobal} from '../GlobalStyled.js';
-import Titulo from '../../assets/Cabeçalho da Ficha/Titulo.svg';
+import React, { useState, useEffect,useContext } from 'react';
 import axios from 'axios';
-import { CharacterSheetContext } from '../../context/CharacterSheetContext';
-
-const HeaderSheet = () => {
-  const { updateHeaderDetails } = useContext(CharacterSheetContext);
+import { GlobalSelect, OptionGlobal } from '../GlobalStyled.js';
+import { HeaderSheetContent, HeaderSheetBox, LevelBox, NameBox, IMG, CharacterOrigins, CharacterOriginsBox, SelectTitle, LevelTitle, Level, NameTitle ,HeaderLevel} from './Styled';
+import Titulo from '../../assets/Cabeçalho da Ficha/Titulo.svg';
+import { CharacterSheetContext } from '../../context/CharacterSheetContext.jsx';
+const HeaderSheet = ({ character }) => {
+  const { updateHeaderDetails , fetchClassDetails} = useContext(CharacterSheetContext);
+  
   const [classes, setClasses] = useState([]);
   const [races, setRaces] = useState([]);
   const [alignments, setAlignments] = useState([]);
-  const antecedentes = [
+  const [backgrounds, setBackgrounds] = useState([
     { value: 'acolyte', name: 'Acolyte' },
     { value: 'charlatan', name: 'Charlatan' },
     { value: 'criminal', name: 'Criminal' },
@@ -40,7 +27,8 @@ const HeaderSheet = () => {
     { value: 'knight', name: 'Knight' },
     { value: 'pirate', name: 'Pirate' },
     { value: 'spy', name: 'Spy' },
-  ];
+  ]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -56,74 +44,48 @@ const HeaderSheet = () => {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchData();
   }, []);
 
-  const handleChange = (field) => (event) => {
-    updateHeaderDetails(field, event.target.value);
+  const handleChange = (field, value) => {
+    updateHeaderDetails(field, value);
+    if (field === 'clazz') {
+      fetchClassDetails(value);
+    }
   };
-
+  
   return (
     <HeaderSheetContent>
       <HeaderSheetBox>
         <LevelBox>
           <HeaderLevel>
-            <LevelTitle>NÍVEL</LevelTitle>
-            <Level>1</Level>
+            <LevelTitle>NIVEL</LevelTitle>
+            <Level>1</Level>  
           </HeaderLevel>
         </LevelBox>
-
         <NameBox>
-          <NameTitle>KIRA FIORE</NameTitle>
+          <NameTitle>{character.name || 'Definir Nome'}</NameTitle>
         </NameBox>
-
-        <IMG src={Titulo} alt="título" />
+        <IMG src={Titulo} alt="Título" />
       </HeaderSheetBox>
-
       <CharacterOrigins>
-        <CharacterOriginsBox>
-          <GlobalSelect name="class" onChange={handleChange('class')} $height="26px" $padding="2px" $margin="10px 0 0 0">
-          <OptionGlobal value="">Selecione...</OptionGlobal>
-            {classes.map(cls => (
-              <OptionGlobal key={cls.index} value={cls.index}>{cls.name}</OptionGlobal>
-            ))}
-          </GlobalSelect>
-          <SelectTitle>CLASSE</SelectTitle>
-        </CharacterOriginsBox>
-
-        <CharacterOriginsBox>
-          <GlobalSelect name="race" onChange={handleChange('race')} $height="26px" $padding="2px" $margin="10px 0 0 0">
-          <OptionGlobal value="">Selecione...</OptionGlobal>
-            {races.map(race => (
-              <OptionGlobal key={race.index} value={race.index}>{race.name}</OptionGlobal>
-            ))}
-          </GlobalSelect>
-          <SelectTitle>RAÇA</SelectTitle>
-        </CharacterOriginsBox>
-
-        <CharacterOriginsBox>
-          <GlobalSelect name="background" onChange={handleChange('background')} $height="26px" $padding="2px" $margin="10px 0 0 0">
-          <OptionGlobal value="">Selecione...</OptionGlobal>
-            {antecedentes.map(ant => (
-              <OptionGlobal key={ant.value} value={ant.value}>{ant.name}</OptionGlobal>
-            ))}
-          </GlobalSelect>
-          <SelectTitle>ANTECENDENTE</SelectTitle>
-        </CharacterOriginsBox>
-
-        <CharacterOriginsBox>
-          <GlobalSelect name="alignment" onChange={handleChange('alignment')} $height="26px" $padding="2px" $margin="10px 0 0 0">
-          <OptionGlobal value="">Selecione...</OptionGlobal>
-            {alignments.map(alignment => (
-              <OptionGlobal key={alignment.index} value={alignment.index}>{alignment.name}</OptionGlobal>
-            ))}
-          </GlobalSelect>
-          <SelectTitle>ALINHAMENTO</SelectTitle>
-        </CharacterOriginsBox>
+        {['clazz', 'race', 'background', 'alignment'].map(key => (
+          <CharacterOriginsBox key={key}>
+            
+            <GlobalSelect name={key} value={character[key] || ''} onChange={(e) => handleChange(key, e.target.value)} $height="26px" $padding="2px" $margin="10px 0 0 0">
+              <OptionGlobal value="">Selecione...</OptionGlobal>
+              {(key === 'clazz' ? classes : key === 'race' ? races : key === 'alignment' ? alignments : backgrounds).map(option => (
+                <OptionGlobal key={option.index || option.value} value={option.index || option.value}>{option.name}</OptionGlobal>
+              ))}
+            </GlobalSelect>
+            <SelectTitle>{key.toUpperCase()}</SelectTitle>
+          </CharacterOriginsBox>
+        ))}
       </CharacterOrigins>
     </HeaderSheetContent>
   );
 };
 
+
 export default HeaderSheet;
+
