@@ -37,7 +37,7 @@ const MagicHeader = ({ userId }) => {
             
             <HeaderTitleBox>     
                 <TitleValue>
-                    CATRIBUTO DE 
+                    ATRIBUTO DE 
                     CONJURAÇÃO
                 </TitleValue>
                 <TitleValue>
