@@ -214,6 +214,27 @@ const getAttributeModifier = (attributes, attributeName) => {
   return attribute ? Math.floor((attribute.value - 10) / 2) : 0;
 };
 
+  const updateResistanceTests = (index, isSelected) => {
+    setCharacterSheet(prev => {
+      const updatedResistanceTests = prev.attributeAndCombat.resistanceTests.map((test, i) => {
+        if (i === index) {
+          const attributeMod = getAttributeModifier(prev.attributeAndCombat.attributes, test.attribute);
+          const totalMod = isSelected ? attributeMod + prev.attributeAndCombat.proficiencyBonus : attributeMod;
+          return { ...test, isSelected, totalMod };
+        }
+        return test;
+      });
+
+      return {
+        ...prev,
+        attributeAndCombat: {
+          ...prev.attributeAndCombat,
+          resistanceTests: updatedResistanceTests
+        }
+      };
+    });
+  }
+
 
 const updateAttributes = (index, value) => {
 setCharacterSheet(prev => {
@@ -291,8 +312,7 @@ const updateSkills = (index, isSelected) => {
       characterSheet,
       setCharacterSheet,
       createCharacterSheet,
-     
-
+      updateResistanceTests,
       updateInputsCharacterDetails,
       updateAppearance,
       uploadCharacterImage,

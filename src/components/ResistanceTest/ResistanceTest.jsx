@@ -13,14 +13,10 @@ import ResistanceValueImage from "../../assets/Atributos e Combates/Inputs e Sel
 const ResistanceTest = () => {
     const { characterSheet, updateResistanceTests } = useContext(CharacterSheetContext);
 
-    
     const handleCheckboxChange = (index) => {
-       
         const isSelected = !characterSheet.attributeAndCombat.resistanceTests[index].isSelected;
-      
         updateResistanceTests(index, isSelected);
     };
-
 
     return (
         <ResistanceTestWrapper>
